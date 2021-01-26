@@ -115,12 +115,14 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <p class="caption"><span class="caption-text">LuatOS 介绍</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference external" href="https://luatos.wiki">首页</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Lua教程</span></p>
+<p class="caption"><span class="caption-text">Lua 教程</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="luaGuide/luaStart.html">白话Lua教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="luaGuide/test.html">测试</a></li>
 </ul>
 
 </div>
@@ -135,118 +137,40 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="toctree-wrapper compound">
+        <div class="figure align-center" id="id1">
+<img alt="LuatOS logo" src="_images/logo-big.svg"/><p class="caption"><span class="caption-text">欢迎来到LuatOS</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
+<div class="legend">
+<a class="reference external image-reference" href="https://gitee.com/openLuat/LuatOS"><img alt="https://gitee.com/openLuat/LuatOS/badge/star.svg?theme=gvp" src="https://gitee.com/openLuat/LuatOS/badge/star.svg?theme=gvp"/></a>
+<img alt="https://img.shields.io/badge/Lua-5.3-blue" src="https://img.shields.io/badge/Lua-5.3-blue"/>
+<a class="reference external image-reference" href="https://gitee.com/openLuat/LuatOS/blob/master/LICENSE"><img alt="https://img.shields.io/badge/license-MIT-green" src="https://img.shields.io/badge/license-MIT-green"/></a>
+</div>
+</div>
+<div class="line-block">
+<div class="line">LuatOS是一款针对嵌入式的脚本运行框架，可以极大提升开发效率。</div>
+<div class="line">使用Lua作为主要语言，并针对源较少的嵌入式资环境进行了优化，极大提升了运行效率，并且可适配更多的单片机和无线芯片模组。</div>
+</div>
+<ol class="arabic simple">
+<li><p>基于Lua 5.3</p></li>
+<li><p>低内存需求, 最低32kb, 96kb flash空间</p></li>
+<li><p>硬件抽象层兼容M3/arm/risc-v等</p></li>
+<li><p>可测试,可模拟(qemu)</p></li>
+<li><p>在线升级</p></li>
+<li><p>可裁剪,可扩展</p></li>
+</ol>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="luatos">
-<h1>欢迎来到LuatOS！<a class="headerlink" href="#luatos" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
-<h2>概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>如果您需要查看入门教程，请点击左侧的`开发指南`，查看模块入门开发步骤。</p>
-</div>
-<p>Luat = Lua + AT,  Luat推出的物联网开源架构，依托于通信模块做简易快捷的开发，将传统的AT命令用Lua语言封装成API，并提供各种功能应用的demo，大大减少用户的开发成本。</p>
-<p>开发者可以通过调用API轻松，便捷的实现TTS、GPS、SOCKET、MQTT、OTA等功能。例如下面通过几行代码既可以实现GPS，MQTT功能。</p>
-<p><strong>GPS</strong></p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--引用gpsv2.lua</span>
-<span class="nb">require</span> <span class="s2">"gpsv2"</span>
-<span class="n">module</span><span class="p">(...,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeall</span><span class="p">)</span>
-
-<span class="n">sys</span><span class="p">.</span><span class="n">taskInit</span><span class="p">(</span><span class="kr">function</span><span class="p">(...)</span>
-   <span class="n">gpsv2</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-   <span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
-      <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"testGps isFix:"</span><span class="p">,</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">isFix</span><span class="p">())</span>
-      <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"testGps lng,lat:"</span><span class="p">,</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">getIntLocation</span><span class="p">())</span>
-      <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"testGps message:"</span><span class="p">,</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">getAltitude</span><span class="p">(),</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">getSpeed</span><span class="p">(),</span>
-            <span class="n">gpsv2</span><span class="p">.</span><span class="n">getAzimuth</span><span class="p">(),</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">getUsedSateCnt</span><span class="p">(),</span> <span class="n">gpsv2</span><span class="p">.</span><span class="n">getViewedSateCnt</span><span class="p">())</span>
-      <span class="n">sys</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-   <span class="kr">end</span>
-<span class="kr">end</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>MQTT</strong></p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--引用mqtt.lua</span>
-<span class="nb">require</span> <span class="s2">"mqtt"</span>
-<span class="n">module</span><span class="p">(...,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeall</span><span class="p">)</span>
-
-<span class="c1">-- 这里请填写修改为自己的IP和端口</span>
-<span class="kd">local</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="s2">"lbsmqtt.airm2m.com"</span><span class="p">,</span> <span class="mi">1884</span>
-
-<span class="n">socket</span><span class="p">.</span><span class="n">setSendMode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1">-- 测试MQTT的任务代码</span>
-<span class="n">sys</span><span class="p">.</span><span class="n">taskInit</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
-   <span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
-      <span class="kr">while</span> <span class="ow">not</span> <span class="n">socket</span><span class="p">.</span><span class="n">isReady</span><span class="p">()</span> <span class="kr">do</span> <span class="n">sys</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="kr">end</span>
-      <span class="kd">local</span> <span class="n">mqttc</span> <span class="o">=</span> <span class="n">mqtt</span><span class="p">.</span><span class="n">client</span><span class="p">(</span><span class="n">misc</span><span class="p">.</span><span class="n">getImei</span><span class="p">(),</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">)</span>
-      <span class="kr">while</span> <span class="ow">not</span> <span class="n">mqttc</span><span class="p">:</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span> <span class="kr">do</span> <span class="n">sys</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="kr">end</span>
-      <span class="kr">if</span> <span class="n">mqttc</span><span class="p">:</span><span class="n">subscribe</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"/device/%s/req"</span><span class="p">,</span> <span class="n">misc</span><span class="p">.</span><span class="n">getImei</span><span class="p">()))</span> <span class="kr">then</span>
-            <span class="kr">if</span> <span class="n">mqttc</span><span class="p">:</span><span class="n">publish</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"/device/%s/report"</span><span class="p">,</span> <span class="n">misc</span><span class="p">.</span><span class="n">getImei</span><span class="p">()),</span> <span class="s2">"test publish "</span> <span class="o">..</span> <span class="nb">os.time</span><span class="p">())</span> <span class="kr">then</span>
-               <span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
-                  <span class="kd">local</span> <span class="n">r</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">param</span> <span class="o">=</span> <span class="n">mqttc</span><span class="p">:</span><span class="n">receive</span><span class="p">(</span><span class="mi">120000</span><span class="p">,</span> <span class="s2">"pub_msg"</span><span class="p">)</span>
-                  <span class="kr">if</span> <span class="n">r</span> <span class="kr">then</span>
-                        <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"这是收到了服务器下发的消息:"</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">payload</span> <span class="ow">or</span> <span class="s2">"nil"</span><span class="p">)</span>
-                  <span class="kr">elseif</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">"pub_msg"</span> <span class="kr">then</span>
-                        <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"这是收到了订阅的消息和参数显示:"</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
-                        <span class="n">mqttc</span><span class="p">:</span><span class="n">publish</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"/device/%s/resp"</span><span class="p">,</span> <span class="n">misc</span><span class="p">.</span><span class="n">getImei</span><span class="p">()),</span> <span class="s2">"response "</span> <span class="o">..</span> <span class="n">param</span><span class="p">)</span>
-                  <span class="kr">elseif</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">"timeout"</span> <span class="kr">then</span>
-                        <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"这是等待超时主动上报数据的显示!"</span><span class="p">)</span>
-                        <span class="n">mqttc</span><span class="p">:</span><span class="n">publish</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"/device/%s/report"</span><span class="p">,</span> <span class="n">misc</span><span class="p">.</span><span class="n">getImei</span><span class="p">()),</span> <span class="s2">"test publish "</span> <span class="o">..</span> <span class="nb">os.time</span><span class="p">())</span>
-                  <span class="kr">else</span>
-                        <span class="kr">break</span>
-                  <span class="kr">end</span>
-               <span class="kr">end</span>
-            <span class="kr">end</span>
-      <span class="kr">end</span>
-      <span class="n">mqttc</span><span class="p">:</span><span class="n">disconnect</span><span class="p">()</span>
-   <span class="kr">end</span>
-<span class="kr">end</span><span class="p">)</span>
-
-<span class="c1">-- 测试代码,用于发送消息给socket</span>
-<span class="n">sys</span><span class="p">.</span><span class="n">taskInit</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
-   <span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
-      <span class="n">sys</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">"pub_msg"</span><span class="p">,</span> <span class="s2">"11223344556677889900AABBCCDDEEFF"</span> <span class="o">..</span> <span class="nb">os.time</span><span class="p">())</span>
-      <span class="n">sys</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">180000</span><span class="p">)</span>
-   <span class="kr">end</span>
-<span class="kr">end</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="luat">
-<h2>Luat介绍<a class="headerlink" href="#luat" title="永久链接至标题">¶</a></h2>
-<p>Lua脚本是内嵌在模块基础软件core中运行的（core编译生成的文件是.lod文件），Lod中有支持Lua运行的环境，Lua脚本就在这个环境中运行。脚本实现功能是通过API（对AT命令进行了封装）实现的。</p>
-<p>在模块内部，Lua发出AT命令，并通过虚拟的uart.ATC 口和Lod之间进行AT命令的交互。即Lua发出AT命令，Lod接收后进行解析并返回AT命令运行结果，不需要上位机（一般是单片机）通过物理串口给模块发AT命令，这样就节省了单片机的花费。</p>
-<img alt="coreLua" src="https://wiki.openluat.com/img/coreLua.jpg"/>
-</div>
-<div class="section" id="id2">
-<h2>名称解释<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 12%"/>
-<col style="width: 88%"/>
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>含义</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>底层软件</p></td>
-<td><p>也叫基础软件，位于/core，用C语言开发完成，支撑Lua的运行。</p></td>
-</tr>
-<tr class="row-odd"><td><p>库脚本</p></td>
-<td><p>lib目录中的“库脚本”（所有项目都应该使用）</p></td>
-</tr>
-<tr class="row-even"><td><p>应用脚本</p></td>
-<td><p>用户自己编写的“应用脚本”（例如demo目录下的脚本）</p></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-
+<script>
+window.onload = function(){
+   //新窗口打开链接
+   $(".section").find("a").each(function () {
+      if ($(this).attr("target") !== "_blank") {
+            $(this).attr('target', '_blank');
+      }
+   });
+}
+</script>
       </article>
       <footer>
         
@@ -291,12 +215,6 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">欢迎来到LuatOS！</a><ul>
-<li><a class="reference internal" href="#id1">概述</a></li>
-<li><a class="reference internal" href="#luat">Luat介绍</a></li>
-<li><a class="reference internal" href="#id2">名称解释</a></li>
-</ul>
-</li>
 </ul>
 
           </div>

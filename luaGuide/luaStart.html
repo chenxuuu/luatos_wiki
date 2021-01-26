@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="欢迎来到LuatOS！" href="../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="测试" href="test.html" /><link rel="prev" title="&lt;no title&gt;" href="../index.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
         <title>白话Lua教程 - LuatOS 文档</title>
@@ -115,12 +115,14 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <p class="caption"><span class="caption-text">LuatOS 介绍</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference external" href="https://luatos.wiki">首页</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Lua教程</span></p>
+<p class="caption"><span class="caption-text">Lua 教程</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">白话Lua教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">测试</a></li>
 </ul>
 
 </div>
@@ -409,16 +411,48 @@ print(你要在这里填东西)
 <p>但是，这样会出现一个问题：如何同时显示单引号和双引号？这里就需要<code class="docutils literal notranslate"><span class="pre">转义字符</span></code>登场了。</p>
 <p>转义字符用于表示不能直接显示的字符，比如后退键、回车键、等。</p>
 <p>以 <code class="docutils literal notranslate"><span class="pre">\</span></code> 开头的都是转义字符，下面时常用的转义字符格式：</p>
-<p>转义字符|含义
--|-
-\n|换行(LF),将当前位置移到下一行开头
-\r|回车(CR),将当前位置移到本行开头
-\\|反斜杠字符<br>’|单引号
-“|双引号
-\0|空字符(NULL)
-\ddd|1到3位八进制数所代表的任意字符
-\xhh|1到2位十六进制所代表的任意字符</br></p>
-<p>例如，如果我们想给str赋值一个单引号，一个双引号（’”），那么我们可以这样写：</p>
+<div class="table-wrapper"><table border="1" class="docutils">
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>换行(LF),将当前位置移到下一行开头</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车(CR),将当前位置移到本行开头</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>反斜杠字符\</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\"</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>空字符(NULL)</td>
+</tr>
+<tr>
+<td>\ddd</td>
+<td>1到3位八进制数所代表的任意字符</td>
+</tr>
+<tr>
+<td>\xhh</td>
+<td>1到2位十六进制所代表的任意字符</td>
+</tr>
+</tbody>
+</table></div><p>例如，如果我们想给str赋值一个单引号，一个双引号（’”），那么我们可以这样写：</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\'\"</span><span class="s2">"</span>
 </pre></div>
 </div>
@@ -516,17 +550,40 @@ print(你要在这里填东西)
 <p>布尔型（boolean）只有两个可选值：<code class="docutils literal notranslate"><span class="pre">true</span></code>（真） 和 <code class="docutils literal notranslate"><span class="pre">false</span></code>（假）</p>
 <p>Lua 把 false 和 nil 看作是<code class="docutils literal notranslate"><span class="pre">false</span></code>，其他的都为true（包括0这个值，也是相当于<code class="docutils literal notranslate"><span class="pre">true</span></code>）</p>
 <p>Lua 中也有许多的<code class="docutils literal notranslate"><span class="pre">关系运算符</span></code>，用于比较大小或比较是否相等，符号及其含义如下表：</p>
-<p>符号|含义
--|-
-==|等于，检测两个值是否相等，相等返回 true，否则返回 false
-~=|不等于，检测两个值是否相等，相等返回 false，否则返回 true</p>
-<blockquote>
-<div><p>|大于，如果左边的值大于右边的值，返回 true，否则返回 false
-&lt;|小于，如果左边的值大于右边的值，返回 false，否则返回 true
-=|大于等于，如果左边的值大于等于右边的值，返回 true，否则返回 false
-&lt;=|小于等于， 如果左边的值小于等于右边的值，返回 true，否则返回 false</p>
-</div></blockquote>
-<p>我们可以通过以下实例来更加透彻的理解关系运算符的应用：</p>
+<div class="table-wrapper"><table border="1" class="docutils">
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>等于，检测两个值是否相等，相等返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>~=</td>
+<td>不等于，检测两个值是否相等，相等返回 false，否则返回 true</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于，如果左边的值大于右边的值，返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于，如果左边的值大于右边的值，返回 false，否则返回 true</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于，如果左边的值大于等于右边的值，返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于， 如果左边的值小于等于右边的值，返回 true，否则返回 false</td>
+</tr>
+</tbody>
+</table></div><p>我们可以通过以下实例来更加透彻的理解关系运算符的应用：</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'==的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span>
@@ -554,12 +611,28 @@ print(你要在这里填东西)
 <div class="section" id="id16">
 <h3>逻辑运算符<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>逻辑运算符基于布尔型的值来进行计算，并给出结果，下表列出了 Lua 语言中的常用逻辑运算符：</p>
-<p>符号|含义
--|-
-and|逻辑与操作符。 若 A 为 false，则返回 A，否则返回 B
-or|逻辑或操作符。 若 A 为 true，则返回 A，否则返回 B
-not|逻辑非操作符。与逻辑运算结果相反，如果条件为 true，逻辑非为 false</p>
-<p>我们可以通过以下实例来更加透彻的理解逻辑运算符的应用：</p>
+<div class="table-wrapper"><table border="1" class="docutils">
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>and</td>
+<td>逻辑与操作符。 若 A 为 false，则返回 A，否则返回 B</td>
+</tr>
+<tr>
+<td>or</td>
+<td>逻辑或操作符。 若 A 为 true，则返回 A，否则返回 B</td>
+</tr>
+<tr>
+<td>not</td>
+<td>逻辑非操作符。与逻辑运算结果相反，如果条件为 true，逻辑非为 false</td>
+</tr>
+</tbody>
+</table></div><p>我们可以通过以下实例来更加透彻的理解逻辑运算符的应用：</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'true and false的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">and</span> <span class="kc">false</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'true or false的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">or</span> <span class="kc">false</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'true and true的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">and</span> <span class="kc">true</span><span class="p">)</span>
@@ -2086,7 +2159,15 @@ window.onload = function(){
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="test.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">测试</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="../index.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
