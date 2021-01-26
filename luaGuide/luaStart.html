@@ -1,0 +1,2234 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="欢迎来到LuatOS！" href="../index.html" />
+
+    <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
+        <title>白话Lua教程 - LuatOS 文档</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="defer" src="../_static/jquery.js"></script>
+    <script defer="defer" src="../_static/underscore.js"></script>
+    <script defer="defer" src="../_static/doctools.js"></script>
+    <script defer="defer" src="../_static/translations.js"></script>
+    <script defer src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">LuatOS  文档</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/logo.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/logo.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=搜索 name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference external" href="https://luatos.wiki">首页</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lua教程</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">白话Lua教程</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="lua">
+<h1>白话Lua教程<a class="headerlink" href="#lua" title="永久链接至标题">¶</a></h1>
+<p>!!!important
+本教程为<strong>零基础教程</strong>，适合广大没有接触过<code class="docutils literal notranslate"><span class="pre">Lua</span></code>的用户进行阅读。
+<br/>对有编程经验的用户来说，可能过于啰嗦，可以点击左侧的<code class="docutils literal notranslate"><span class="pre">简明Lua语法</span></code>查看简易文档。
+<br/>建议读者在阅读时多运行代码进行测试，以确保牢记和巩固知识点。
+<br/>为了方便各位测试<code class="docutils literal notranslate"><span class="pre">Lua</span></code>代码，<strong>我们提供了<a class="reference external" href="https://chenxuuu.gitee.io/lua-online/">Lua在线调试网站，点击即可访问</a></strong>。</p>
+<hr class="docutils"/>
+<div class="section" id="id1">
+<h2>初始<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>初识Lua<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>Lua 是一种轻量小巧的脚本语言，它用标准C语言编写并以源代码形式开放。这意味着什么呢？这意味着Lua虚拟机可以<strong>很方便的嵌入别的程序里</strong>，从而为应用程序提供灵活的扩展和定制功能。而整个Lua虚拟机编译后仅仅一百余K，经过适当的裁剪还能做到更小，十分适合嵌入式的开发。</p>
+<p>同时，在目前脚本引擎中，Lua的运行速度占有绝对优势。这些都决定了Lua是作为嵌入式脚本的最佳选择。</p>
+<p>在我们编写代码之前，需要做一下准备，就是：<strong>确保你输入标点符号时，用的不是中文输入法。</strong></p>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id3">
+<h3>第一个 Lua 程序<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>几乎所有语言的第一行代码，都是输出<code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>，本教程也不意外。</p>
+<p>在<code class="docutils literal notranslate"><span class="pre">Lua</span></code>中，打印结果只需要使用<code class="docutils literal notranslate"><span class="pre">print</span></code>这个<code class="docutils literal notranslate"><span class="pre">函数</span></code>即可。同时，如果需要使用<code class="docutils literal notranslate"><span class="pre">函数</span></code>，只需要在函数名后加上双括号，同时传入你想传入的值即可。</p>
+<p>所以，我们来执行下面的代码，打印出<code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>吧！</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"hello world!"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id4">
+<h3>输出数据<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>上一部分，我们知道了，在<code class="docutils literal notranslate"><span class="pre">Lua</span></code>中，可以使用<code class="docutils literal notranslate"><span class="pre">print</span></code>函数来打印你想要得到的结果。</p>
+<p>并且还知道了，<code class="docutils literal notranslate"><span class="pre">函数</span></code>是指可以实现某些功能的子程序，可以使用<code class="docutils literal notranslate"><span class="pre">函数名(参数)</span></code>来执行。</p>
+<p>让我们试着输出一些其他东西吧！使用多个print函数，输出自己想输出的数据。</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"测试"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"aabcdefg"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"xxxxx"</span><span class="p">,</span><span class="s2">"第二个参数"</span><span class="p">,</span><span class="s2">"第三个参数"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id5">
+<h3>代码注释<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>代码<code class="docutils literal notranslate"><span class="pre">注释</span></code>就是在代码里，不会运行的部分。<code class="docutils literal notranslate"><span class="pre">注释</span></code>完全不会被运行。</p>
+<p>这部分是为了在查看代码时，可以更好地立即现有代码含义用的。</p>
+<p>我们可以用<code class="docutils literal notranslate"><span class="pre">--</span></code>开头，来写一段<code class="docutils literal notranslate"><span class="pre">单行注释</span></code></p>
+<p>也可以用<code class="docutils literal notranslate"><span class="pre">--[[</span></code>开头，<code class="docutils literal notranslate"><span class="pre">]]</span></code>结尾，写一段多行注释。</p>
+<p>下面是注释的例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"这段代码会运行"</span><span class="p">)</span>
+<span class="c1">--print("我被注释掉了，所以不会运行")</span>
+<span class="cm">--[[</span>
+<span class="cm">    我是多行注释</span>
+<span class="cm">    不管我写多少行</span>
+<span class="cm">    都不会影响代码运行</span>
+<span class="cm">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id6">
+<h2>变量<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="number">
+<h3>number变量<a class="headerlink" href="#number" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">变量</span></code>，可以看作是一个桶，在里面装你想要装的内容。这些内容可以是Lua包含的所有合法类型。</p>
+<p>例如：我想要新建一个桶，名叫bucket，在里面放入233这个数字，就可以像下面一样：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">bucket</span> <span class="o">=</span> <span class="mi">233</span>
+</pre></div>
+</div>
+<p>让我们试着自己新建几个变量吧！</p>
+<ul class="simple">
+<li><p>新建变量year，并将变量的值设置为1926</p></li>
+<li><p>新建变量month，并将变量的值设置为8</p></li>
+<li><p>新建变量day，并将变量的值设置为7</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--新建三个变量，并赋值</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">1926</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">day</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="c1">--打印出三个变量的值</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">month</span><span class="p">,</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="nil">
+<h3>了解nil<a class="headerlink" href="#nil" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">nil</span></code>类型表示没有任何有效值，只要是没有声明的值，它就是<code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
+<p>比如我打印一个没有声明的值，便会输出<code class="docutils literal notranslate"><span class="pre">nil</span></code>：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">ccc</span> <span class="o">=</span> <span class="mi">233</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ccc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aaa</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>这里需要你思考一下，运行以下代码，将会输出什么结果？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">'2'</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id7">
+<h3>赋值语句<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">赋值</span></code>是改变一个变量值的最基本的方法。</p>
+<p>如下面一样，使用<code class="docutils literal notranslate"><span class="pre">等号</span></code>对<code class="docutils literal notranslate"><span class="pre">左边</span></code>的<code class="docutils literal notranslate"><span class="pre">变量</span></code>进行赋值</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">n</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Lua</span></code>可以对多个变量同时赋值，变量用<code class="docutils literal notranslate"><span class="pre">逗号</span></code>分开，<code class="docutils literal notranslate"><span class="pre">赋值</span></code>语句<code class="docutils literal notranslate"><span class="pre">右边的值</span></code>会依次赋给<code class="docutils literal notranslate"><span class="pre">左边的变量</span></code>。</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">n</span>
+</pre></div>
+</div>
+<p>当左右值的数量不一致时，Lua会进行下面的设定：</p>
+<ul class="simple">
+<li><p>变量个数 &gt; 值的个数：按变量个数补足nil</p></li>
+<li><p>变量个数 &lt; 值的个数：多余的值会被忽略</p></li>
+</ul>
+<p>下面的例子可以展示这种设定：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="c1">--输出0   1   nil</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">+</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="c1">--输出1   2</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="c1">--输出0   nil   nil</span>
+</pre></div>
+</div>
+<p><strong>这里需要你思考一下，运行以下代码，将会输出什么结果？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+<span class="n">a</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="p">,</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id8">
+<h3>交换变量<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>这部分需要你自己完成一个任务：</p>
+<p>已知下面的代码，并且已知<code class="docutils literal notranslate"><span class="pre">a</span></code>和<code class="docutils literal notranslate"><span class="pre">b</span></code>的值，请在交换他们的值，使打印输出<code class="docutils literal notranslate"><span class="pre">12</span>  <span class="pre">34</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">34</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="c1">--你需要在这里进行交换变量的操作</span>
+<span class="c1">--提示：新建一个变量来存放临时的值</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id9">
+<h3>输出变量<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>我们已经知道了，在Lua中，可以使用print函数来打印你想要得到的结果。</p>
+<p>同时在上一节，我们学会了新建变量和设置变量的值。</p>
+<p>让我们试着输出某个变量吧！使用<code class="docutils literal notranslate"><span class="pre">print函数</span></code>，输出已知变量。 我们已知变量<code class="docutils literal notranslate"><span class="pre">num</span></code>为某个数字，试着输出它的值吧！</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>num = 123
+--请补全代码，输出num的值
+print(你要在这里填东西)
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id10">
+<h3>算数运算符<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>运算符是一个特殊的符号，用于告诉解释器执行特定的数学或逻辑运算。</p>
+<p>上一节中，新建的数字变量，我们称之为<code class="docutils literal notranslate"><span class="pre">number</span></code>类型的变量。</p>
+<p>本节我们来学习使用<code class="docutils literal notranslate"><span class="pre">算术运算符</span></code>，如下所示：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+ 加法
+- 减法
+* 乘法
+/ 除法
+% 取余，求出除法的余数
+^ 乘幂，计算次方
+- 负号，取负值
+</pre></div>
+</div>
+<p>我们可以通过以下实例来理解算术运算符的应用：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a + b 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a - b 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a * b 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a / b 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a % b 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a^2 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'-a 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a * (b - a) 的值为 '</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>你需要完成下面的任务：</strong></p>
+<p>已知，一个长方体的长宽高分别为a、b、c（单位米），且这个物体重量为m（单位克）</p>
+<p>请打印出物体的密度（单位g/m³）</p>
+<p>注：密度计算公式 密度 = 质量 / 体积</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="c1">--长宽高</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1">--重量</span>
+<span class="c1">--请打印出物体的密度</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id11">
+<h2>字符串<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="section" id="string">
+<h3>string类型变量<a class="headerlink" href="#string" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">字符串</span></code>（即<code class="docutils literal notranslate"><span class="pre">string</span></code>），就是一串文本数据，可以存储你要的文本。</p>
+<p>在第二节中，<code class="docutils literal notranslate"><span class="pre">print</span></code>出的数据就是一个字符串。</p>
+<p>Lua 语言中字符串可以使用以下三种方式来表示：</p>
+<ol class="simple">
+<li><p>单引号间的一串字符</p></li>
+<li><p>双引号间的一串字符</p></li>
+<li><p>[[和]]间的一串字符</p></li>
+</ol>
+<p>你可以参考下面的例子来深入理解：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--双引号间的一串字符</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">"Lua"</span>
+<span class="c1">--单引号间的一串字符</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s1">'Lua'</span>
+<span class="cm">--[[和]]</span><span class="c1">--间的一串字符</span>
+<span class="n">str3</span> <span class="o">=</span> <span class="s">[[Lua]]</span>
+<span class="n">str4</span> <span class="o">=</span> <span class="s">[[使用双括号时，甚至能包含换行数据</span>
+<span class="s">换行了</span>
+<span class="s">最后一行]]</span>
+
+<span class="c1">--输出所有字符串</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>接下来你需要完成下面的练习：</strong></p>
+<p>新建三个变量<code class="docutils literal notranslate"><span class="pre">s1</span></code>、<code class="docutils literal notranslate"><span class="pre">s2</span></code>、<code class="docutils literal notranslate"><span class="pre">s3</span></code></p>
+<p>分别存入字符串数据：<code class="docutils literal notranslate"><span class="pre">str</span></code>、<code class="docutils literal notranslate"><span class="pre">abc</span></code>、<code class="docutils literal notranslate"><span class="pre">233</span></code>，使输出打印正确</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请在空白处补全代码</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"s1,s2,s3的值："</span><span class="p">,</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">,</span><span class="n">s3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"s1,s2,s3的类型："</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">s1</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">s2</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">s3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id12">
+<h3>转义字符<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>在上一节中，我们学习了如何声明字符串。</p>
+<p>但是我们有时候会遇到一些特殊的问题，如：<strong>如何输出单引号和双引号？如何输出回车换行？</strong></p>
+<p>也许我们可以用下面的方式简单规避，输出单引号时，声明字符串用双引号括起来，像下面这样</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s2">"'"</span>
+</pre></div>
+</div>
+<p>同理，输出双引号时，声明字符串用单引号括起来，像下面这样</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s1">'"'</span>
+</pre></div>
+</div>
+<p>但是，这样会出现一个问题：如何同时显示单引号和双引号？这里就需要<code class="docutils literal notranslate"><span class="pre">转义字符</span></code>登场了。</p>
+<p>转义字符用于表示不能直接显示的字符，比如后退键、回车键、等。</p>
+<p>以 <code class="docutils literal notranslate"><span class="pre">\</span></code> 开头的都是转义字符，下面时常用的转义字符格式：</p>
+<p>转义字符|含义
+-|-
+\n|换行(LF),将当前位置移到下一行开头
+\r|回车(CR),将当前位置移到本行开头
+\\|反斜杠字符<br>’|单引号
+“|双引号
+\0|空字符(NULL)
+\ddd|1到3位八进制数所代表的任意字符
+\xhh|1到2位十六进制所代表的任意字符</br></p>
+<p>例如，如果我们想给str赋值一个单引号，一个双引号（’”），那么我们可以这样写：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\'\"</span><span class="s2">"</span>
+</pre></div>
+</div>
+<p><strong>下面需要你来完成一个简单的任务：</strong></p>
+<p>新建一个变量<code class="docutils literal notranslate"><span class="pre">str</span></code>，给str赋值为</p>
+<p><code class="docutils literal notranslate"><span class="pre">ab\cd"ef'g\h]]</span></code></p>
+<p>并打印出来</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="c1">--补全代码</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="c1">--输出应为ab\cd"ef'g\h]]</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id13">
+<h3>string拼接<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>字符串和字符串可以相加吗？可以！我们可以用拼接符号来将两个独立的字符串拼起来。</p>
+<p>我们使用<code class="docutils literal notranslate"><span class="pre">..</span></code>来表示字符串拼接符号，如下面的示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'abc'</span><span class="o">..</span><span class="s1">'def'</span><span class="p">)</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s1">'123'</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s1">'999'</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>下面你要完成这个任务：</strong></p>
+<p>已知三个字符串变量<code class="docutils literal notranslate"><span class="pre">s1</span></code>、<code class="docutils literal notranslate"><span class="pre">s2</span></code>、<code class="docutils literal notranslate"><span class="pre">s3</span></code></p>
+<p>请将他们按顺序拼接起来，存入<code class="docutils literal notranslate"><span class="pre">all</span></code>，并使用print输出结果</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">,</span><span class="n">s3</span> <span class="o">=</span> <span class="s2">"aaa"</span><span class="p">,</span><span class="s2">"bbb"</span><span class="p">,</span><span class="s2">"ccc"</span>
+<span class="n">all</span> <span class="o">=</span> <span class="c1">--请补全代码</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="numberstring">
+<h3>number转string<a class="headerlink" href="#numberstring" title="永久链接至标题">¶</a></h3>
+<p>上面一节学习了如何拼接字符串，这个方法固然很好用，但是有时候我们会遇到一个需求，那就是把<code class="docutils literal notranslate"><span class="pre">number</span></code>类型的变量和<code class="docutils literal notranslate"><span class="pre">string</span></code>类型的变量拼接起来，组成一个新的<code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<p>比如下面的变量<code class="docutils literal notranslate"><span class="pre">n</span></code>和<code class="docutils literal notranslate"><span class="pre">s</span></code>，如何拼接起来呢？</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">'m/s'</span>
+</pre></div>
+</div>
+<p>我们可以直接将<code class="docutils literal notranslate"><span class="pre">number</span></code>类型的变量<code class="docutils literal notranslate"><span class="pre">n</span></code>转换成<code class="docutils literal notranslate"><span class="pre">string</span></code>类型的值，这样就可以拼接了</p>
+<p>使用<code class="docutils literal notranslate"><span class="pre">tostring(value)</span></code>函数即可实现这一操作：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">'m/s'</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">..</span><span class="n">s</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>下面你要完成这个任务：</strong></p>
+<p>已知三个变量<code class="docutils literal notranslate"><span class="pre">n1</span></code>、<code class="docutils literal notranslate"><span class="pre">s</span></code>、<code class="docutils literal notranslate"><span class="pre">n2</span></code></p>
+<p>然后将他们按顺序拼接起来，存入变量<code class="docutils literal notranslate"><span class="pre">result</span></code>，使输出结果正确</p>
+<p>小提示：在某些情况下，Lua会自动将number类型转换成string类型</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n1</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="s2">"abc"</span><span class="p">,</span><span class="mi">2</span>
+<span class="n">result</span> <span class="o">=</span> <span class="c1">--请补全代码</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="stringnumber">
+<h3>string转number<a class="headerlink" href="#stringnumber" title="永久链接至标题">¶</a></h3>
+<p>上面一节学习了如何将number转成string，这一节我们来学习如何将string转成number</p>
+<p>比如下面的变量<code class="docutils literal notranslate"><span class="pre">s</span></code>，存储的内容是一个字符串，但是代表了一个数字，如何转成number再与n相加计算呢？</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">'2333'</span>
+</pre></div>
+</div>
+<p>我们可以直接将<code class="docutils literal notranslate"><span class="pre">string</span></code>类型的变量<code class="docutils literal notranslate"><span class="pre">s</span></code>转换成<code class="docutils literal notranslate"><span class="pre">number</span></code>类型的值，这样就可以计算了</p>
+<p>使用<code class="docutils literal notranslate"><span class="pre">tonumber(value)</span></code>函数即可实现这一操作：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">'2333'</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>下面你要完成这个任务：</strong></p>
+<p>已知三个字符串变量<code class="docutils literal notranslate"><span class="pre">s1</span></code>、<code class="docutils literal notranslate"><span class="pre">s2</span></code>、<code class="docutils literal notranslate"><span class="pre">s3</span></code>，其内容均为纯数字</p>
+<p>请计算他们的算术和，赋值给新建的变量<code class="docutils literal notranslate"><span class="pre">result</span></code>，使下面代码输出正确结果</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">,</span><span class="n">s3</span> <span class="o">=</span> <span class="s2">"11"</span><span class="p">,</span><span class="s2">"12"</span><span class="p">,</span><span class="s2">"100"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="c1">--请补全代码</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id14">
+<h2>逻辑运算<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3>布尔型和比较运算<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>布尔型（boolean）只有两个可选值：<code class="docutils literal notranslate"><span class="pre">true</span></code>（真） 和 <code class="docutils literal notranslate"><span class="pre">false</span></code>（假）</p>
+<p>Lua 把 false 和 nil 看作是<code class="docutils literal notranslate"><span class="pre">false</span></code>，其他的都为true（包括0这个值，也是相当于<code class="docutils literal notranslate"><span class="pre">true</span></code>）</p>
+<p>Lua 中也有许多的<code class="docutils literal notranslate"><span class="pre">关系运算符</span></code>，用于比较大小或比较是否相等，符号及其含义如下表：</p>
+<p>符号|含义
+-|-
+==|等于，检测两个值是否相等，相等返回 true，否则返回 false
+~=|不等于，检测两个值是否相等，相等返回 false，否则返回 true</p>
+<blockquote>
+<div><p>|大于，如果左边的值大于右边的值，返回 true，否则返回 false
+&lt;|小于，如果左边的值大于右边的值，返回 false，否则返回 true
+=|大于等于，如果左边的值大于等于右边的值，返回 true，否则返回 false
+&lt;=|小于等于， 如果左边的值小于等于右边的值，返回 true，否则返回 false</p>
+</div></blockquote>
+<p>我们可以通过以下实例来更加透彻的理解关系运算符的应用：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'==的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'~=的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">~=</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'&gt;的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'&lt;的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'&gt;=的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'&lt;=的结果'</span><span class="p">,</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>下面问题来了，运行以下代码，将会输出什么结果？请自行思考</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">'1'</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">~=</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id16">
+<h3>逻辑运算符<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>逻辑运算符基于布尔型的值来进行计算，并给出结果，下表列出了 Lua 语言中的常用逻辑运算符：</p>
+<p>符号|含义
+-|-
+and|逻辑与操作符。 若 A 为 false，则返回 A，否则返回 B
+or|逻辑或操作符。 若 A 为 true，则返回 A，否则返回 B
+not|逻辑非操作符。与逻辑运算结果相反，如果条件为 true，逻辑非为 false</p>
+<p>我们可以通过以下实例来更加透彻的理解逻辑运算符的应用：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'true and false的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">and</span> <span class="kc">false</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'true or false的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">or</span> <span class="kc">false</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'true and true的结果'</span><span class="p">,</span><span class="kc">true</span> <span class="ow">and</span> <span class="kc">true</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'false or false的结果'</span><span class="p">,</span><span class="kc">false</span> <span class="ow">or</span> <span class="kc">false</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'not false的结果'</span><span class="p">,</span><span class="ow">not</span> <span class="kc">false</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'123 and 345的结果'</span><span class="p">,</span><span class="mi">123</span> <span class="ow">and</span> <span class="mi">345</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'nil and true的结果'</span><span class="p">,</span><span class="kc">nil</span> <span class="ow">and</span> <span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>下面问题来了，运行以下代码，将会输出什么结果？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">'1'</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="ow">or</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span> <span class="ow">and</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id17">
+<h3>检验大小（自测题）<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>题目：如果已知number变量<code class="docutils literal notranslate"><span class="pre">n</span></code>，那么如果需要判断n是否符合下面的条件：</p>
+<p>3&lt;n≤10</p>
+<p>以下四行判断代码，正确的是？</p>
+<p>（返回true即表示变量<code class="docutils literal notranslate"><span class="pre">n</span></code>符合要求）</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="c1">--这个数可能是任意数字</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id18">
+<h2>分支判断<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id19">
+<h3>条件判断<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p>上面一节学习了布尔类型，那么这个需要用到哪里呢？我们需要用它来进行某些判断。</p>
+<p>在Lua中，可以使用<code class="docutils literal notranslate"><span class="pre">if</span></code>语句来进行判断，如下面所举例的代码，可以判断<code class="docutils literal notranslate"><span class="pre">n是否为小于10的数</span></code>：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="kr">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'n小于10'</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>我们整理一下，实际上if语句就是如下结构：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>if 条件 then
+    符合条件的代码
+end
+</pre></div>
+</div>
+<p><strong>下面是你需要完成的事：</strong></p>
+<p>已知变量<code class="docutils literal notranslate"><span class="pre">n</span></code>，请判断<code class="docutils literal notranslate"><span class="pre">n</span></code>是否为奇数，如果是，请给<code class="docutils literal notranslate"><span class="pre">n</span></code>的值加上1</p>
+<p>如果你觉得有难度，请查看下面的提示：</p>
+<ul class="simple">
+<li><p>求出<code class="docutils literal notranslate"><span class="pre">n</span></code>除以2的余数：n % 2</p></li>
+<li><p>给<code class="docutils literal notranslate"><span class="pre">n</span></code>的值加上1：n = n + 1</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>--已知一个number变量n
+n = 5   --这个数字是几都有可能
+print("n在判断前的值",n)
+
+if 你的条件 then
+    要做的事
+end
+print("n在判断后的值",n)
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id20">
+<h3>多条件判断<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>上面一节学习了简单的if语句写法，这一节我们来学习多条件分支语句</p>
+<p>在Lua中，可以使用<code class="docutils literal notranslate"><span class="pre">if</span></code>语句来进行判断，同时可以使用<code class="docutils literal notranslate"><span class="pre">else</span></code>语句，表示多个分支判断</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>if 条件1 then
+    满足条件1
+elseif 条件2 then
+    不满足条件1，但是满足条件2
+else
+    前面条件全都不满足
+end
+</pre></div>
+</div>
+<p>举个例子，比如有一个<code class="docutils literal notranslate"><span class="pre">数字n</span></code>：</p>
+<ul class="simple">
+<li><p>当它大于等于0、小于5时，输出<code class="docutils literal notranslate"><span class="pre">太小</span></code>，</p></li>
+<li><p>当它大于等于5、小于10时，输出<code class="docutils literal notranslate"><span class="pre">适中</span></code>，</p></li>
+<li><p>当它大于等于10时，输出<code class="docutils literal notranslate"><span class="pre">太大</span></code>，</p></li>
+</ul>
+<p>那么代码就像如下这样：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="c1">--更改这个数多运行几次试试</span>
+<span class="kr">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'太小'</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'适中'</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'太大'</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>注意：<code class="docutils literal notranslate"><span class="pre">else</span></code>和<code class="docutils literal notranslate"><span class="pre">elseif</span></code>都是可选的，可有可无，但是<code class="docutils literal notranslate"><span class="pre">end</span></code>不能省略</p>
+<p><strong>下面是你需要完成的事：</strong></p>
+<p>已知变量<code class="docutils literal notranslate"><span class="pre">n</span></code>，请判断<code class="docutils literal notranslate"><span class="pre">n</span></code>是否为奇数，</p>
+<ul class="simple">
+<li><p>如果是，请给<code class="docutils literal notranslate"><span class="pre">n</span></code>的值加上1</p></li>
+<li><p>如果不是，请将<code class="docutils literal notranslate"><span class="pre">n</span></code>的值改为原来的两倍</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>--已知一个number变量n
+n = 5   --这个数字是几都有可能
+print("n在判断前的值",n)
+
+if 你的条件 then
+    要做的事
+else
+    要做的事
+end
+print("n在判断后的值",n)
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id21">
+<h3>判断三角形合法性（自测题）<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p>你需要使用前面几章的知识，来完成下面的题目</p>
+<p>已知三个number类型的变量a、b、c，分别代表三根木棒的长度</p>
+<p>请判断，使用这三根木棒，是否可以组成一个三角形（两短边之和大于第三边）</p>
+<ul class="simple">
+<li><p>如果可以组成，就打印出true</p></li>
+<li><p>如果不可以，就打印false</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="c1">--多改几个数值自行测试</span>
+
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="if">
+<h3>if的判断依据（自测题）<a class="headerlink" href="#if" title="永久链接至标题">¶</a></h3>
+<p>我们在前面了解到，Lua 把 <code class="docutils literal notranslate"><span class="pre">false</span></code> 和 <code class="docutils literal notranslate"><span class="pre">nil</span></code> 看作是<code class="docutils literal notranslate"><span class="pre">false</span></code>，其他的都为<code class="docutils literal notranslate"><span class="pre">true</span></code>（包括<code class="docutils literal notranslate"><span class="pre">0</span></code>这个值，也是相当于<code class="docutils literal notranslate"><span class="pre">true</span></code>）</p>
+<p><strong>那么问题来了，执行下面的代码，将会输出什么？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="kr">if</span> <span class="mi">0</span> <span class="kr">then</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">..</span><span class="s1">'T,'</span>
+<span class="kr">else</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">..</span><span class="s1">'F,'</span>
+<span class="kr">end</span>
+<span class="kr">if</span> <span class="n">a</span> <span class="kr">then</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">..</span><span class="s1">'T'</span>
+<span class="kr">else</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">..</span><span class="s1">'F'</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id22">
+<h2>函数<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id23">
+<h3>初识函数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">函数</span></code>是指一段在一起的、可以做某一件事儿的程序，也叫做子程序。</p>
+<p>在前面的内容中，我们已经接触过了函数的调用，这个函数就是前面用到了很多次的<code class="docutils literal notranslate"><span class="pre">print(...)</span></code>。</p>
+<p>调用函数只需要按下面的格式即可：</p>
+<p><code class="docutils literal notranslate"><span class="pre">函数名(参数1,参数2,参数3,......)</span></code></p>
+<p>为何要使用函数？因为很多事情都是重复性操作，我们使用函数，可以快速完成这些操作</p>
+<p>下面我们举一个最简单的函数例子，这个函数没有传入参数、没有返回值</p>
+<p>它实现了一个简单的功能，就是输出<code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world!</span></code>：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">hello</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>这个函数名为<code class="docutils literal notranslate"><span class="pre">hello</span></code>，我们可以按下面的方法进行调用（执行）：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">hello</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">hello</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>这行代码会输出<code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world!</span></code>。</p>
+<p>同时，在Lua中，函数也是一种变量类型，也就是说，<code class="docutils literal notranslate"><span class="pre">hello</span></code>实际上也是一个变量，里面存储的是一个函数，我们可以用下面的代码来理解：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">hello</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">hello</span>
+<span class="c1">--把hello函数同时赋值给a变量</span>
+<span class="n">a</span><span class="p">()</span>
+<span class="n">hello</span><span class="p">()</span>
+<span class="c1">--a和hello变量指向同一个函数</span>
+<span class="c1">--所以执行结果和hello()相同</span>
+</pre></div>
+</div>
+<p>因为函数只是个变量，你甚至在一开始可以这样声明<code class="docutils literal notranslate"><span class="pre">hello</span></code>函数：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">hello</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>下面你需要做一件简单的事情：</strong></p>
+<ul class="simple">
+<li><p>新建一个函数变量<code class="docutils literal notranslate"><span class="pre">biu</span></code>，使其执行后会打印<code class="docutils literal notranslate"><span class="pre">biubiubiu</span></code>这个字符串，</p></li>
+<li><p>新建一个函数变量<code class="docutils literal notranslate"><span class="pre">pong</span></code>，使其与<code class="docutils literal notranslate"><span class="pre">biu</span></code>指向的函数相同</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请在此处补全代码</span>
+
+<span class="c1">--请使下面的调用可以正常打印出biubiubiu</span>
+<span class="n">biu</span><span class="p">()</span>
+<span class="n">pong</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"biu和pong相等吗？"</span><span class="p">,</span><span class="n">biu</span><span class="o">==</span><span class="n">pong</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="local">
+<h3>local变量<a class="headerlink" href="#local" title="永久链接至标题">¶</a></h3>
+<p>之前我们创建的变量，都是全局变量，这种变量在代码运行周期从头到尾，都不会被销毁，而且随处都可调用。</p>
+<p>但是当我们代码量增加，很多时候大量新建全局变量会导致内存激增，我们需要一种可以临时使用、并且可以自动销毁释放内存资源的变量，要怎么解决呢？</p>
+<p>我们可以使用<code class="docutils literal notranslate"><span class="pre">local</span></code>标志来新建临时变量，使用<code class="docutils literal notranslate"><span class="pre">local</span></code>创建一个局部变量，与全局变量不同，局部变量只在被声明的那个代码块内有效。</p>
+<p>参考下面的代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="kr">function</span> <span class="nf">add</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">add</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上面的代码中，<code class="docutils literal notranslate"><span class="pre">n</span></code>就是一个局部变量，它只在<code class="docutils literal notranslate"><span class="pre">这个funcion</span></code>中有效，并且函数运行完后会自动回收这部分的内存。</p>
+<p>我们应该尽可能的使用局部变量，以方便lua虚拟机自动回收内存空间，同时减少资源占用提高运行速度。</p>
+<p>下面请阅读以下代码，思考一下，正确的输出结果是什么：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s1">'abc'</span>
+<span class="kr">function</span> <span class="nf">connect</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">s</span> <span class="o">=</span> <span class="n">str</span><span class="o">..</span><span class="s1">'def'</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id24">
+<h3>函数参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<p>在前几章的使用中，我们知道函数是可以传入参数的，如<code class="docutils literal notranslate"><span class="pre">print(123)</span></code></p>
+<p>那么，我们如何编写可以传入参数的函数呢？可以按下面的模板来写</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>function 函数名(参数1,参数2,...)
+    代码内容
+end
+</pre></div>
+</div>
+<p>这里传入的参数，等价于在函数内部新建了一个<code class="docutils literal notranslate"><span class="pre">local</span></code>的变量，修改这些数据不会影响外部的数据（除了后面还没有讲到的<code class="docutils literal notranslate"><span class="pre">table</span></code>等类型）</p>
+<p>举个例子，比如下面的函数，可以实现打印出两个传入值的和：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">--会输出3</span>
+</pre></div>
+</div>
+<p>这段代码其实等价于：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">add</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">add</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>下面问题来了，请设计一个函数<code class="docutils literal notranslate"><span class="pre">p</span></code>，可以按下面的调用方式来打印出物体的密度：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--补全这个函数的代码，满足题目要求</span>
+<span class="kr">function</span> <span class="nf">p</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="c1">--一个长方体的长宽高分别为a、b、c（单位米）</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">--这个物体重量为m（单位克）</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">230</span>
+<span class="c1">--下面打印出密度</span>
+<span class="c1">--注：密度计算公式 密度 = 质量 / 体积</span>
+<span class="n">p</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id25">
+<h3>函数返回值<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>在前面的代码中，我们实现了一个函数，输入变量<code class="docutils literal notranslate"><span class="pre">a</span></code>、<code class="docutils literal notranslate"><span class="pre">b</span></code>，函数会自动输出两个数值的和。</p>
+<p>但是一般来说，我们的需求远远不止这些，我们可能需要一个如下功能的函数：</p>
+<p><code class="docutils literal notranslate"><span class="pre">执行函数，输入两个值，获取这两个值的和</span></code></p>
+<p>如果还是按上面几节的内容，我们只会输出这个值，并不能把这个值传递给其他的变量进行后续使用，如何解决这个需求呢？</p>
+<p>我们可以使用函数的返回值来实现这个需求，结合上面的需求，我们可以用下面的代码实现：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="kr">end</span>
+<span class="n">all</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">--这里all的值就是3了</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这里的<code class="docutils literal notranslate"><span class="pre">return</span></code>表示返回一个值，<code class="docutils literal notranslate"><span class="pre">并且立刻结束这个函数的运行</span></code></p>
+<p>同时，和输入值可以有多个一样，返回值也可以有多个</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span><span class="s2">"ok"</span>
+<span class="kr">end</span>
+<span class="n">all</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">--这里all的值就是3了</span>
+<span class="c1">--这里result的值就是string "ok"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>下面问题来了，请设计一个函数<code class="docutils literal notranslate"><span class="pre">p</span></code>，可以按下面的调用方式来返回出物体的密度，返回值为<code class="docutils literal notranslate"><span class="pre">number</span></code>类型：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">p</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+    <span class="c1">--请补全代码</span>
+<span class="kr">end</span>
+
+<span class="c1">--一个长方体的长宽高分别为a、b、c（单位米）</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">--这个物体重量为m（单位克）</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">230</span>
+<span class="c1">--下面返回密度值</span>
+<span class="c1">--注：密度计算公式 密度 = 质量 / 体积</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id26">
+<h3>判断三角形合法性2（自测题）<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<p>你需要使用前面几章的知识，来完成下面的题目</p>
+<ul class="simple">
+<li><p>已知三个number类型的变量，分别代表三根木棒的长度</p></li>
+<li><p>请判断，使用这三根木棒，是否可以组成一个三角形（两短边之和大于第三边）</p></li>
+<li><p>请新建一个函数triangle，并可以用如下形式调用（如果可以组成，就返回true）：</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">triangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+    <span class="c1">--请补全代码</span>
+<span class="kr">end</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="c1">--传入值为三边长度，多改几个测试下</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id27">
+<h3>返回多个值（自测题）<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p>你需要使用前面几章的知识，来完成下面的题目</p>
+<ul class="simple">
+<li><p>已知2个number类型的变量，分别代表一个长方体的长和宽</p></li>
+<li><p>请计算这个长方形的周长和面积</p></li>
+<li><p>请新建一个函数<code class="docutils literal notranslate"><span class="pre">rectangle</span></code>，并可以用如下形式调用：</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">function</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="c1">--补全代码</span>
+<span class="kr">end</span>
+
+<span class="n">area</span><span class="p">,</span><span class="n">len</span> <span class="o">=</span> <span class="n">rectangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">--结果：</span>
+<span class="c1">--面积area为2</span>
+<span class="c1">--周长len为6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">len</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="table">
+<h2>table<a class="headerlink" href="#table" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h3>认识数组<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<p>数组，使用一个变量名，存储一系列的值</p>
+<p>很多语言中都有数组这个概念，在Lua中，我们可以使用<code class="docutils literal notranslate"><span class="pre">table</span></code>（表）来实现这个功能</p>
+<p>在Lua中，table是一个一系列元素的集合，使用大括号进行表示，其中的元素之间以逗号分隔，类似下面的代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>我们可以直接使用<code class="docutils literal notranslate"><span class="pre">元素</span></code>的<code class="docutils literal notranslate"><span class="pre">下标</span></code>，来访问、或者对该<code class="docutils literal notranslate"><span class="pre">元素</span></code>进行赋值操作。</p>
+<p>在上面的<code class="docutils literal notranslate"><span class="pre">table</span></code>变量<code class="docutils literal notranslate"><span class="pre">t</span></code>中，第一个元素的下标是<code class="docutils literal notranslate"><span class="pre">1</span></code>，第二个是<code class="docutils literal notranslate"><span class="pre">2</span></code>，以此类推。</p>
+<p>我们可以用<code class="docutils literal notranslate"><span class="pre">变量名</span></code>+<code class="docutils literal notranslate"><span class="pre">中括号</span></code>，中括号里加上<code class="docutils literal notranslate"><span class="pre">下标</span></code>，来访问或更改这个<code class="docutils literal notranslate"><span class="pre">元素</span></code>，如下面的例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">--打印1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">--打印8</span>
+
+<span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span> <span class="c1">--更改第二个元素的值</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1">--打印99</span>
+
+<span class="n">t</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">--凭空新建第六个元素并赋值</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="c1">--打印2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="c1">--因为不存在，打印nil</span>
+</pre></div>
+</div>
+<p>以上就是table最简单的一个例子了，就是当作数组来用（注意，一般语言中的数组基本都为不可变长度，这里的table为可变长度）</p>
+<p><strong>下面你需要完成：</strong></p>
+<ul class="simple">
+<li><p>新建一个table，名为cards，存入1-10十个数字</p></li>
+<li><p>将第3个元素与第7个元素交换</p></li>
+<li><p>将第9个元素与第2个元素交换</p></li>
+<li><p>增加第11个变量，值为23</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请补全代码</span>
+<span class="n">cards</span> <span class="o">=</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id29">
+<h3>简单table<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p>上一节里，我们将<code class="docutils literal notranslate"><span class="pre">table</span></code>来表示<code class="docutils literal notranslate"><span class="pre">数组</span></code>，实际上，<code class="docutils literal notranslate"><span class="pre">table</span></code>中可以包括<code class="docutils literal notranslate"><span class="pre">任意类型的数据</span></code></p>
+<p>比如我们可以在<code class="docutils literal notranslate"><span class="pre">table</span></code>中放置<code class="docutils literal notranslate"><span class="pre">number</span></code>和<code class="docutils literal notranslate"><span class="pre">string</span></code>数据，类似下面的代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"abc"</span><span class="p">,</span><span class="mi">223</span><span class="p">,</span><span class="s2">",..a"</span><span class="p">,</span><span class="mi">123123</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>我们甚至能在里面放<code class="docutils literal notranslate"><span class="pre">function</span></code>变量</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kr">function</span><span class="p">()</span> <span class="kr">return</span> <span class="mi">123</span> <span class="kr">end</span><span class="p">,</span>
+    <span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">)</span> <span class="kr">end</span><span class="p">,</span>
+    <span class="kr">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="kr">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="kr">end</span><span class="p">,</span>
+    <span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">)</span> <span class="kr">end</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]()</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]()</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">]()</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">]()</span>
+</pre></div>
+</div>
+<p>这些<code class="docutils literal notranslate"><span class="pre">table</span></code>访问每个元素的方式仍然是直接用下标，并且也能用下标来进行修改</p>
+<p><strong>下面你需要完成：</strong></p>
+<ul class="simple">
+<li><p>新建一个<code class="docutils literal notranslate"><span class="pre">table</span></code>，名为<code class="docutils literal notranslate"><span class="pre">funcList</span></code>，并实现以下功能</p></li>
+<li><p>调用<code class="docutils literal notranslate"><span class="pre">funcList[1](a,b)</span></code>，返回a和b的乘积</p></li>
+<li><p>调用<code class="docutils literal notranslate"><span class="pre">funcList[2](a,b)</span></code>，返回a减b的差</p></li>
+<li><p>调用<code class="docutils literal notranslate"><span class="pre">funcList[3](a)</span></code>，返回a的相反数（-a）</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请补全代码</span>
+<span class="n">funcList</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="c1">--提供两个数</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a,b值为"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a和b的乘积："</span><span class="p">,</span><span class="n">funcList</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a和b的差："</span><span class="p">,</span><span class="n">funcList</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"a和相反数："</span><span class="p">,</span><span class="n">funcList</span><span class="p">[</span><span class="mi">3</span><span class="p">](</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id30">
+<h3>table下标<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<p>在前两节，我们的<code class="docutils literal notranslate"><span class="pre">table</span></code>都只是一些简单的List（列表），每个元素的<code class="docutils literal notranslate"><span class="pre">下标</span></code>都是自动从1排列的</p>
+<p>实际上，Lua中，下标可以直接在声明时进行指定，像下面这样：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+<span class="c1">--上面和下面的代码等价</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1">--甚至你可以跳过某些下标</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+<span class="c1">--输出9</span>
+
+<span class="c1">--在声明后赋予元素值也是可以的</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{}</span><span class="c1">--空的table</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">101</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">101</span><span class="p">])</span>
+<span class="c1">--输出10</span>
+</pre></div>
+</div>
+<p><strong>下面你需要：</strong></p>
+<ul class="simple">
+<li><p>新建一个变量<code class="docutils literal notranslate"><span class="pre">t</span></code>，并按下面的格式声明</p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">1</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">123</span></code>（number）</p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">13</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">"abc"</span></code>（string）</p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">666</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">"666"</span></code>（string）</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请补全代码</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为1的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为13的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">13</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为666的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">666</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">666</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id31">
+<h3>下标进阶<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<p>在上一节，我们学习了如何自定义下标，其实在Lua中，下标也可以是字符串，如下面的例子</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="s2">"apple"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">banana</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="n">pear</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="c1">--使用["下标"] = 值</span>
+<span class="c1">--和  下标 = 值</span>
+<span class="c1">--都是正确写法</span>
+<span class="c1">--当第二种方式有歧义时，应该用第一种方式</span>
+
+<span class="c1">--可以用下面两种方式访问：</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">"apple"</span><span class="p">])</span>
+<span class="c1">--输出10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">apple</span><span class="p">)</span>
+<span class="c1">--输出10</span>
+<span class="c1">--当第二种方式有歧义时，应该用第一种方式</span>
+</pre></div>
+</div>
+<p>可见，在使用<code class="docutils literal notranslate"><span class="pre">string</span></code>作为下标时，<code class="docutils literal notranslate"><span class="pre">table</span></code>的灵活性提升了一共数量级。</p>
+<p><code class="docutils literal notranslate"><span class="pre">string</span></code>作为下标时，也可以动态赋值：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 空table</span>
+<span class="n">t</span><span class="p">[</span><span class="s2">"new"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"新的值"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">new</span><span class="p">)</span>
+<span class="c1">--输出 新的值</span>
+</pre></div>
+</div>
+<p><strong>下面你需要完成：</strong></p>
+<ul class="simple">
+<li><p>新建<code class="docutils literal notranslate"><span class="pre">table</span></code>变量<code class="docutils literal notranslate"><span class="pre">t</span></code></p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">apple</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">123</span></code>（number）</p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">banana</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">"abc"</span></code>（string）</p></li>
+<li><p>下标为<code class="docutils literal notranslate"><span class="pre">1@1</span></code>的元素，值为<code class="docutils literal notranslate"><span class="pre">"666"</span></code>（string）</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请补全代码</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为apple的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="s2">"apple"</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">"apple"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为banana的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="s2">"banana"</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">"banana"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"下标为1@1的元素："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="s2">"1@1"</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">"1@1"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id32">
+<h3>table小测验<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<p><strong>下面的代码，将会打印什么？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">apple</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="mf">7.52</span><span class="p">,</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">2.1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">banana</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="mf">8.31</span><span class="p">,</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">1.4</span><span class="p">,</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="s1">'2018'</span>
+    <span class="p">},</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="s1">'2019'</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">price</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">apple</span><span class="p">.</span><span class="n">price</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">banana</span><span class="p">.</span><span class="n">weight</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">year</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="table2">
+<h3>table小测验2<a class="headerlink" href="#table2" title="永久链接至标题">¶</a></h3>
+<p><strong>下面的代码，将会打印什么？</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="mf">7.52</span><span class="p">,</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">2.1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="mf">8.31</span><span class="p">,</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">1.4</span><span class="p">,</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="s1">'2018'</span>
+    <span class="p">},</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="s1">'2019'</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span>
+    <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">price</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">weight</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">"year"</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="luatable">
+<h3>Lua全局变量与table<a class="headerlink" href="#luatable" title="永久链接至标题">¶</a></h3>
+<p>在前面我们知道了，在<code class="docutils literal notranslate"><span class="pre">table</span></code>中，可以直接用<code class="docutils literal notranslate"><span class="pre">table名[下标]</span></code>或<code class="docutils literal notranslate"><span class="pre">table名.string下标</span></code>来访问元素</p>
+<p>实际上，在Lua中，所有的全局变量全部被存放在了一共大<code class="docutils literal notranslate"><span class="pre">table</span></code>中，这个<code class="docutils literal notranslate"><span class="pre">table</span></code>名为：<code class="docutils literal notranslate"><span class="pre">_G</span></code></p>
+<p>我们可以用下面的例子来示范：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">123</span><span class="c1">--新建变量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="c1">--输出123</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">_G</span><span class="p">.</span><span class="n">n</span><span class="p">)</span><span class="c1">--输出123</span>
+
+<span class="n">_G</span><span class="p">.</span><span class="n">abc</span> <span class="o">=</span> <span class="mi">1</span><span class="c1">--相当于新建全局变量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">abc</span><span class="p">)</span><span class="c1">--输出1</span>
+
+<span class="nb">_G</span><span class="p">[</span><span class="s2">"def"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">23</span><span class="c1">--相当于新建全局变量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">def</span><span class="p">)</span><span class="c1">--输出23</span>
+
+<span class="c1">--甚至你可以像下面这样</span>
+<span class="n">_G</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>
+<span class="nb">_G</span><span class="p">[</span><span class="s2">"print"</span><span class="p">](</span><span class="s2">"world"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>现在，你明白为什么说<code class="docutils literal notranslate"><span class="pre">万物基于table</span></code>了吧？</p>
+<p><strong>你需要完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知有一个全局变量，名为<code class="docutils literal notranslate"><span class="pre">@#$</span></code></p></li>
+<li><p>请新建一个变量<code class="docutils literal notranslate"><span class="pre">result</span></code></p></li>
+<li><p>将<code class="docutils literal notranslate"><span class="pre">@#$</span></code>变量里的值赋值给<code class="docutils literal notranslate"><span class="pre">result</span></code></p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">_G</span><span class="p">[</span><span class="s2">"@#$"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">123</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="c1">--请补全代码</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"result值为"</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="table3">
+<h3>table小测试3<a class="headerlink" href="#table3" title="永久链接至标题">¶</a></h3>
+<p><strong>请新建一个名为t的table，满足以下要求</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t[10]</span></code>可获得<code class="docutils literal notranslate"><span class="pre">number</span></code>类型数据<code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t.num</span></code>可获得<code class="docutils literal notranslate"><span class="pre">number</span></code>类型数据<code class="docutils literal notranslate"><span class="pre">12</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t.abc[3]</span></code>可获得<code class="docutils literal notranslate"><span class="pre">string</span></code>类型数据<code class="docutils literal notranslate"><span class="pre">abcd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t.a.b.c</span></code>可获得<code class="docutils literal notranslate"><span class="pre">number</span></code>类型数据<code class="docutils literal notranslate"><span class="pre">789</span></code></p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--请补全代码</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"t[10]可获得number类型数据100:"</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">10</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"t.num可获得number类型数据12:"</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">num</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">num</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"t.abc[3]可获得string类型数据abcd:"</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">abc</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">abc</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"t.a.b.c可获得number类型数据789:"</span><span class="p">,</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">b</span><span class="p">.</span><span class="n">c</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">.</span><span class="n">b</span><span class="p">.</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="table-concat">
+<h3>table.concat<a class="headerlink" href="#table-concat" title="永久链接至标题">¶</a></h3>
+<p>table.concat (table [, sep [, i [, j ] ] ])</p>
+<p>将元素是<code class="docutils literal notranslate"><span class="pre">string</span></code>或者<code class="docutils literal notranslate"><span class="pre">number</span></code>类型的<code class="docutils literal notranslate"><span class="pre">table</span></code>，每个元素连接起来变成字符串并返回。</p>
+<p>可选参数<code class="docutils literal notranslate"><span class="pre">sep</span></code>，表示连接间隔符，默认为空。</p>
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code>和<code class="docutils literal notranslate"><span class="pre">j</span></code>表示元素起始和结束的下标。</p>
+<p>下面是例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">"hello"</span> <span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"|"</span><span class="p">))</span>
+
+<span class="c1">--&gt;打印的结果：</span>
+<span class="c1">--135hello</span>
+<span class="c1">--1|3|5|hello</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知table变量t，</p></li>
+<li><p>将t中的结果全部连起来</p></li>
+<li><p>间隔符使用<code class="docutils literal notranslate"><span class="pre">,</span></code></p></li>
+<li><p>并使用print打印出来</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"连接结果："</span><span class="p">)</span>
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id33">
+<h3>table删减<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<p>table.insert (table, [pos ,] value)</p>
+<p>在（数组型）表 table 的 pos 索引位置插入 value，其它元素向后移动到空的地方。pos 的默认值是表的长度加一，即默认是插在表的最后。</p>
+<p>table.remove (table [, pos])</p>
+<p>在表 table 中删除索引为 pos（pos 只能是 number 型）的元素，并返回这个被删除的元素，它后面所有元素的索引值都会减一。pos 的默认值是表的长度，即默认是删除表的最后一个元素。</p>
+<p>下面是例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>             <span class="c1">--a[1] = 1,a[2] = 8</span>
+<span class="nb">table.insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1">--在表索引为1处插入3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">table.insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>    <span class="c1">--在表的最后插入10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1">--&gt;打印的结果：</span>
+<span class="c1">--3    1    8</span>
+<span class="c1">--3    1    8    10</span>
+
+
+<span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.remove</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">--删除速索引为1的元素</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.remove</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>   <span class="c1">--删除最后一个元素</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1">--&gt;打印的结果：</span>
+<span class="c1">--1</span>
+<span class="c1">--2    3    4    nil</span>
+<span class="c1">--4</span>
+<span class="c1">--2    3    nil    nil</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知table变量<code class="docutils literal notranslate"><span class="pre">t</span></code>，</p></li>
+<li><p>去除t中的第一个元素</p></li>
+<li><p>然后这时，在t的第三个元素前，加上一个number变量，值为810</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">}</span>
+
+<span class="c1">--补全代码</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"第一个元素应为2："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"第三个元素应为810："</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id34">
+<h2>循环<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<div class="section" id="while">
+<h3>while循环<a class="headerlink" href="#while" title="永久链接至标题">¶</a></h3>
+<p>在实际功能实现中，经常会遇到需要循环运行的代码，比如从1到100填充table数据，我们可以直接用循环语句来实现</p>
+<p>我们首先来学习<code class="docutils literal notranslate"><span class="pre">while</span></code>这个循环语法，整体的格式如下：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>while 继续循环判断依据 do
+    执行的代码
+end
+</pre></div>
+</div>
+<p>下面举一个例子，我们计算从1加到100的结果：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kd">local</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="kr">while</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">100</span> <span class="kr">do</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">num</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上面的代码，就是当num≤100时，result不断地加num，并且num每次循环后自己加1</p>
+<p><strong>理解了上面的代码，我们来完成下面一个简单的任务吧：</strong></p>
+<ul class="simple">
+<li><p>已知两个number类型的变量<code class="docutils literal notranslate"><span class="pre">min</span></code>和<code class="docutils literal notranslate"><span class="pre">max</span></code></p></li>
+<li><p>请计算从<code class="docutils literal notranslate"><span class="pre">min</span></code>与<code class="docutils literal notranslate"><span class="pre">max</span></code>之间，所有<code class="docutils literal notranslate"><span class="pre">3的倍数</span></code>的和</p></li>
+<li><p>打印出结果</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>min,max = 114,514 --这个结果应为42009
+result = 0--结果存放到这个变量
+
+while 请完善 do
+    --补全代码
+end
+
+print("结果：",result)
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="for">
+<h3>for循环<a class="headerlink" href="#for" title="永久链接至标题">¶</a></h3>
+<p>for循环在某些程度上，和while循环很相似，但是for循环可以更加简洁地表达中间累积的量</p>
+<p>我们首先来学习<code class="docutils literal notranslate"><span class="pre">for</span></code>这个循环语法，整体的格式如下：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>for 临时变量名=开始值,结束值,步长 do
+    循环的代码
+end
+</pre></div>
+</div>
+<p>其中，<code class="docutils literal notranslate"><span class="pre">步长</span></code>可以省略，默认为1</p>
+<p><code class="docutils literal notranslate"><span class="pre">临时变量名</span></code>可以直接在代码区域使用（但不可更改），每次循环会自动加<code class="docutils literal notranslate"><span class="pre">步长值</span></code>，并且在到达<code class="docutils literal notranslate"><span class="pre">结束值</span></code>后停止循环</p>
+<p>下面举一个例子，我们计算从1加到100的结果：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span> <span class="kr">do</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">i</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>上面的代码，就是当i≤100时，result不断地加i，并且i每次循环后增加1</p>
+<p><strong>理解了上面的代码，我们来完成下面一个简单的任务吧：</strong></p>
+<ul class="simple">
+<li><p>已知两个number类型的变量<code class="docutils literal notranslate"><span class="pre">min</span></code>和<code class="docutils literal notranslate"><span class="pre">max</span></code></p></li>
+<li><p>请计算从<code class="docutils literal notranslate"><span class="pre">min</span></code>与<code class="docutils literal notranslate"><span class="pre">max</span></code>之间，所有7的倍数的和</p></li>
+<li><p>打印出结果</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">min</span><span class="p">,</span><span class="n">max</span> <span class="o">=</span> <span class="mi">114</span><span class="p">,</span><span class="mi">514</span> <span class="c1">--这个结果应为17955</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="c1">--结果存放到这个变量</span>
+
+<span class="kr">for</span> <span class="c1">--补全代码</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"结果："</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id35">
+<h3>中断循环<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<p>前面我们学习了循环语句，有些时候循环运行到一半，我们不想再继续运行了，怎么办呢？</p>
+<p>我们可以在一个循环体中使用<code class="docutils literal notranslate"><span class="pre">break</span></code>，来立即结束本次循环，继续运行下面的代码</p>
+<p>比如像下面这样，计算1-100相加途中，<code class="docutils literal notranslate"><span class="pre">小于100</span></code>的<code class="docutils literal notranslate"><span class="pre">最大的和</span></code>：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span> <span class="kr">do</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="kr">if</span> <span class="n">result</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="kr">then</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="kr">break</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>可以看见，当发现和大于100后，代码立即把<code class="docutils literal notranslate"><span class="pre">result</span></code>的值还原到了加上当前数字之前的状态，并且调用<code class="docutils literal notranslate"><span class="pre">break</span></code>语句，立即退出了本次循环</p>
+<p>在<code class="docutils literal notranslate"><span class="pre">while</span></code>中，我们也可以使用<code class="docutils literal notranslate"><span class="pre">break</span></code>:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">c</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="kr">if</span> <span class="n">result</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="kr">then</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="kr">break</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>我们在这里直接使用了死循环（因为<code class="docutils literal notranslate"><span class="pre">while</span></code>的继续运行判断依据始终为<code class="docutils literal notranslate"><span class="pre">true</span></code>），整体逻辑也和之前for的代码一致，当发现和大于100后，代码立即把<code class="docutils literal notranslate"><span class="pre">result</span></code>的值还原到了加上当前数字之前的状态，并且调用<code class="docutils literal notranslate"><span class="pre">break</span></code>语句，立即退出了本次循环</p>
+<p><strong>现在你需要完成一项任务：</strong></p>
+<ul class="simple">
+<li><p>请求出大于变量max的，最小的13的倍数（max大于0）</p></li>
+<li><p>并将结果打印出来</p></li>
+<li><p>本题理论上不用循环就能实现，但是为了练习一下技巧，请用for循环来实现</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">max</span> <span class="o">=</span> <span class="mi">810</span> <span class="c1">--结果应为806</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="kr">for</span> <span class="c1">--请补全代码</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id36">
+<h3>循环测试题1（自测题）<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<p>前面我们学习了循环语句，我们需要完成下面的任务</p>
+<p>我们知道，<code class="docutils literal notranslate"><span class="pre">print</span></code>函数可以打印一行完整的输出</p>
+<p>那么，已知变量a，请打印出下面的结果：</p>
+<p>（a为大于0的整数，且需要输出a行数据，数据从1开始，每行与上一行的差为2）</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>1
+3
+5
+7
+9
+（上面例子为当a为5的情况）
+</pre></div>
+</div>
+<p>做题区域：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1">--需要用print输出要求的结果</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"输出结果："</span><span class="p">)</span>
+
+
+<span class="kr">for</span> <span class="c1">--请补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id37">
+<h3>循环测试题2（自测题）<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>我们需要完成下面的任务</p>
+<p>那么，已知变量a，请打印出下面的结果：</p>
+<p>（a为大于0的整数，且需要输出a行数据，第一行为一个*，后面每行多一个*）</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>*
+**
+***
+****
+*****
+（上面例子为当a为5的情况）
+</pre></div>
+</div>
+<p>做题区域：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1">--需要用print输出要求的结果</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"输出结果："</span><span class="p">)</span>
+
+
+<span class="kr">for</span> <span class="c1">--请补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id38">
+<h3>循环测试题3（自测题）<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<p>我们需要完成下面的任务</p>
+<p>那么，已知变量a，请打印出下面的结果：</p>
+<p>（a为大于0的整数，且需要输出a行数据，按图示规律输出）</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
+123456789
+12345678910
+1234567891011
+（上面例子为当a为11的情况）
+</pre></div>
+</div>
+<p>做题区域：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="c1">--需要用print输出要求的结果</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"输出结果："</span><span class="p">)</span>
+
+
+<span class="kr">for</span> <span class="c1">--请补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id39">
+<h3>循环测试题4（自测题）<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>有一只猴子，第一天摘了若干个桃子 ，当即吃了一半，但还觉得不过瘾 ，就又多吃了一个。</p></li>
+<li><p>第2天早上又将剩下的桃子吃掉一半，还是觉得不过瘾，就又多吃了两个。</p></li>
+<li><p>以后每天早上都吃了前一天剩下的一半加天数个（例如，第5天吃了前一天剩下的一半加5个）。</p></li>
+<li><p>到第n天早上再想吃的时候，就只剩下一个桃子了。</p></li>
+<li><p>那么，已知变量a为最后一天的天数，请打印出第一天的桃子数。</p></li>
+<li><p>如：a为5时，输出114</p></li>
+</ul>
+<p>做题区域：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1">--需要用print输出要求的结果</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"输出结果："</span><span class="p">)</span>
+
+
+<span class="kr">for</span> <span class="c1">--请补全代码</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id40">
+<h2>详解string库<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
+<div class="section" id="string-sub">
+<h3>string.sub<a class="headerlink" href="#string-sub" title="永久链接至标题">¶</a></h3>
+<p>接下来几节会讲解string库的各种接口</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">string.sub</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">i</span> <span class="p">[,</span> <span class="n">j</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>返回字符串 <code class="docutils literal notranslate"><span class="pre">s</span></code> 中，从索引 <code class="docutils literal notranslate"><span class="pre">i</span></code> 到索引 <code class="docutils literal notranslate"><span class="pre">j</span></code> 之间的子字符串。</p>
+<p>i 可以为负数，表示倒数第几个字符。</p>
+<p>当 j 缺省时，默认为 -1，也就是字符串 s 的最后位置。</p>
+<p>当索引 i 在字符串 s 的位置在索引 j 的后面时，将返回一个空字符串。</p>
+<p>下面是例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">string.sub</span><span class="p">(</span><span class="s2">"Hello Lua"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.sub</span><span class="p">(</span><span class="s2">"Hello Lua"</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.sub</span><span class="p">(</span><span class="s2">"Hello Lua"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.sub</span><span class="p">(</span><span class="s2">"Hello Lua"</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">--&gt;打印的结果：</span>
+<span class="n">lo</span> <span class="n">L</span>
+<span class="n">ello</span> <span class="n">Lua</span>
+
+<span class="n">Lua</span>
+</pre></div>
+</div>
+<p>值得注意的是，我们可以使用冒号来简化语法，像下面这样：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"12345"</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="nb">string.sub</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="c1">--两种写法是等价关系</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知字符串变量<code class="docutils literal notranslate"><span class="pre">s</span></code>，请分别打印出（每种一行）：</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>从<code class="docutils literal notranslate"><span class="pre">第4个字符开始，到最后</span></code>的值</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>从<code class="docutils literal notranslate"><span class="pre">第1个字符开始，到倒数第3个字符</span></code>的值</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>从<code class="docutils literal notranslate"><span class="pre">倒数第5个字符开始，到倒数第2个字符</span></code>的值</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"1919810"</span>
+
+<span class="c1">--补全代码</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-rep">
+<h3>string.rep<a class="headerlink" href="#string-rep" title="永久链接至标题">¶</a></h3>
+<p>string.rep(s, n)</p>
+<p>返回字符串 s 的 n 次拷贝。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">string.rep</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="c1">--输出结果：</span>
+<span class="c1">--abcabcabc</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<p><strong>打印一行数据，数据内容为810个114514</strong></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--补全代码</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-len">
+<h3>string.len<a class="headerlink" href="#string-len" title="永久链接至标题">¶</a></h3>
+<p>string.len(s)</p>
+<p>接收一个字符串，返回它的长度。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"hello lua"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="c1">--输出结果：</span>
+<span class="mi">9</span>
+
+<span class="c1">--同时也可以使用简便语法</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="n">len</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>新建一个变量s，使数据内容为810个114514</p></li>
+<li><p>并打印出字符串s的长度</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="c1">--补全代码</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id41">
+<h3>大小写转换<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>string.lower(s)</p>
+<p>接收一个字符串 s，返回一个把所有大写字母变成小写字母的字符串。</p>
+<p>string.upper(s)</p>
+<p>接收一个字符串 s，返回一个把所有小写字母变成大写字母的字符串。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"hello lua"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.lower</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="c1">--输出结果：</span>
+<span class="n">HELLO</span> <span class="n">LUA</span>
+<span class="n">hello</span> <span class="n">lua</span>
+
+<span class="c1">--同时也可以使用简便语法</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="n">upper</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<p>已知一个变量<code class="docutils literal notranslate"><span class="pre">s</span></code>，打印出全是大写字母的s字符串</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"asd8938KJjsidiajdl;(()k)"</span>
+<span class="nb">print</span> <span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-format">
+<h3>string.format<a class="headerlink" href="#string-format" title="永久链接至标题">¶</a></h3>
+<p>string.format(formatstring, …)</p>
+<p>按照格式化参数<code class="docutils literal notranslate"><span class="pre">formatstring</span></code>，返回后面<code class="docutils literal notranslate"><span class="pre">...</span></code>内容的格式化版本。</p>
+<p>编写格式化字符串的规则与标准 c 语言中 printf 函数的规则基本相同：</p>
+<p>它由常规文本和指示组成，这些指示控制了每个参数应放到格式化结果的什么位置，及如何放入它们。</p>
+<p>一个指示由字符<code class="docutils literal notranslate"><span class="pre">%</span></code>加上一个字母组成，这些字母指定了如何格式化参数，例如<code class="docutils literal notranslate"><span class="pre">d</span></code>用于十进制数、<code class="docutils literal notranslate"><span class="pre">x</span></code>用于十六进制数、<code class="docutils literal notranslate"><span class="pre">o</span></code>用于八进制数、<code class="docutils literal notranslate"><span class="pre">f</span></code>用于浮点数、<code class="docutils literal notranslate"><span class="pre">s</span></code>用于字符串等。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"%.4f"</span><span class="p">,</span> <span class="mf">3.1415926</span><span class="p">))</span>     <span class="c1">-- 保留4位小数</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"%d %x %o"</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span><span class="c1">-- 十进制数31转换成不同进制</span>
+<span class="n">d</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2015</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">"%s %02d/%02d/%d"</span><span class="p">,</span> <span class="s2">"today is:"</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="c1">--控制输出2位数字，并在前面补0</span>
+
+<span class="c1">--&gt;输出</span>
+<span class="c1">-- 3.1416</span>
+<span class="c1">-- 31 1f 37</span>
+<span class="c1">-- today is: 29/07/2015</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知一个变量<code class="docutils literal notranslate"><span class="pre">n</span></code>，为<code class="docutils literal notranslate"><span class="pre">number</span></code>类型整数</p></li>
+<li><p>打印出<code class="docutils literal notranslate"><span class="pre">n:</span></code>连上<code class="docutils literal notranslate"><span class="pre">n</span></code>值的字符串</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">810</span>
+
+<span class="nb">print</span> <span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id42">
+<h3>string的本质<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<p>这一节我们来讲解字符串的本质</p>
+<p><code class="docutils literal notranslate"><span class="pre">字符串</span></code>，是用来存储一串字符的，<code class="docutils literal notranslate"><span class="pre">但是它的本质就是一串数字</span></code>。如何也一串数字来代表一串字符呢？</p>
+<p>在计算机中，每一个符号都对应着一个数字，但是在讲解这个知识之前，我们了解一下补充知识：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>在大多数编程语言中，我们使用0x开头来表示这个数字是16进制的。
+比如
+10等价于0x0a
+256等价于0xff
+</pre></div>
+</div>
+<p>接下来，你需要了解，每一个符号都对应着一个数字，比如：</p>
+<p><code class="docutils literal notranslate"><span class="pre">0</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x30</span></code>、<code class="docutils literal notranslate"><span class="pre">1</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x31</span></code>
+<code class="docutils literal notranslate"><span class="pre">a</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x61</span></code>、<code class="docutils literal notranslate"><span class="pre">b</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x62</span></code>
+<code class="docutils literal notranslate"><span class="pre">A</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x41</span></code>、<code class="docutils literal notranslate"><span class="pre">B</span></code>对应着<code class="docutils literal notranslate"><span class="pre">0x42</span></code></p>
+<p>上面的编码规则，我们称之为ascii码，具体想了解可以打开下面的网址查看：</p>
+<p><a class="reference external" href="http://ascii.911cha.com/">http://ascii.911cha.com/</a></p>
+<p>当然，1字节最大为0xff，即256，只能存下一部分符号，大部分的中文按某些编码，一个中文占用2或3个字节</p>
+<p>计算机如何解析这些数据，我们不需要了解，当你知道了上面的知识后，你应该可以理解下面的描述：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>字符串"apple"实际上的内容就是下面的一串数字：
+0x61,0x70,0x70,0x6c,0x65
+</pre></div>
+</div>
+<p>同时，lua的字符串中可以保存任何数值，即使是0x00这种不代表任何含义的数，也可以保存</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>补充：在其他语言中（如C），0x00代表字符串结束，但是在lua中并不是这样。
+lua的字符串每字节可以存储任意的一字节数据。
+</pre></div>
+</div>
+<p>比如下面的描述：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>有一串lua字符串中的数据为：
+0x01,0x02,0x30,0x00,0x44
+实际人能看到的（不可见字符用�代替）：
+��0�D
+当然，你不能说你看不见的数据就不存在，他们都完好无损地在这个字符串中
+</pre></div>
+</div>
+<p>下面你需要思考一个问题：一串字符串数据如下，它的实际内容是什么（指人能看见的字符串内容，如abcd）？</p>
+<p>0x62,0x61,0x6e,0x61,0x6e,0x61</p>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-char">
+<h3>string.char<a class="headerlink" href="#string-char" title="永久链接至标题">¶</a></h3>
+<p>string.char (…)</p>
+<p>接收 0 个或更多的整数（整数范围：0~255），返回这些整数所对应的 ASCII 码字符组成的字符串。当参数为空时，默认是一个 0。</p>
+<p>如果上一章节有认真学习过了的话，这段话应该是很好理解的。实质上就是把计算机认识的一串数字，变成字符串变量，并且字符串内的数据就是要存的那串数据。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="nb">string.char</span><span class="p">(</span><span class="mh">0x30</span><span class="p">,</span><span class="mh">0x31</span><span class="p">,</span><span class="mh">0x32</span><span class="p">,</span><span class="mh">0x33</span><span class="p">)</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="nb">string.char</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span><span class="mh">0x02</span><span class="p">,</span><span class="mh">0x30</span><span class="p">,</span><span class="mh">0x03</span><span class="p">,</span><span class="mh">0x44</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span>
+
+<span class="c1">--&gt;输出（不可见字符用�代替）</span>
+<span class="c1">--0123</span>
+<span class="c1">--��0�D</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知一个字符串的每个字符在数组t中按顺序排列</p></li>
+<li><p>请根据t的值，打印出字符串内容（一行数据）</p></li>
+<li><p>注：这个字符串存储的不一定是可见的字符</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x79</span><span class="p">,</span><span class="mh">0x6F</span><span class="p">,</span><span class="mh">0x75</span><span class="p">,</span><span class="mh">0x20</span><span class="p">,</span><span class="mh">0x61</span><span class="p">,</span><span class="mh">0x72</span><span class="p">,</span><span class="mh">0x65</span><span class="p">,</span><span class="mh">0x20</span><span class="p">,</span><span class="mh">0x72</span><span class="p">,</span><span class="mh">0x69</span><span class="p">,</span><span class="mh">0x67</span><span class="p">,</span><span class="mh">0x68</span><span class="p">,</span><span class="mh">0x74</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"真正的字符串内容："</span><span class="p">)</span>
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-byte">
+<h3>string.byte<a class="headerlink" href="#string-byte" title="永久链接至标题">¶</a></h3>
+<p>string.byte(s [, i [, j ] ])</p>
+<p>返回字符 s[i]、s[i + 1]、s[i + 2]、······、s[j] 所对应的 ASCII 码。i 的默认值为 1，即第一个字节,j 的默认值为 i 。</p>
+<p>这个函数功能刚好和前面的string.char相反，是提取字符串中实际的数值。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">str</span> <span class="o">=</span> <span class="s2">"12345"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.byte</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str</span><span class="p">:</span><span class="n">byte</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="c1">--也可以这样</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str</span><span class="p">:</span><span class="n">byte</span><span class="p">())</span><span class="c1">--不填默认是1</span>
+
+<span class="c1">--&gt;输出（十进制数据）</span>
+<span class="c1">--50</span>
+<span class="c1">--50</span>
+<span class="c1">--49</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知字符串s</p></li>
+<li><p>请把s中代表的数据，全部相加，并打印出来</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">string.char</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"s内数据的和是："</span><span class="p">)</span>
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-find">
+<h3>string.find<a class="headerlink" href="#string-find" title="永久链接至标题">¶</a></h3>
+<p>string.find(s, p [, init [, plain] ])</p>
+<p>这个函数会在字符串<code class="docutils literal notranslate"><span class="pre">s</span></code>中，寻找匹配<code class="docutils literal notranslate"><span class="pre">p</span></code>字符串的数据。如果成功找到，那么会返回<code class="docutils literal notranslate"><span class="pre">p</span></code>字符串在<code class="docutils literal notranslate"><span class="pre">s</span></code>字符串中出现的开始位置和结束位置；如果没找到，那么就返回<code class="docutils literal notranslate"><span class="pre">nil</span></code>。</p>
+<p>第三个参数<code class="docutils literal notranslate"><span class="pre">init</span></code>默认为<code class="docutils literal notranslate"><span class="pre">1</span></code>，表示从第几个字符开始匹配，当<code class="docutils literal notranslate"><span class="pre">init</span></code>为负数时，表示从<code class="docutils literal notranslate"><span class="pre">s</span></code>字符串的倒数第<code class="docutils literal notranslate"><span class="pre">-init</span></code>个字符处开始匹配。</p>
+<p>第四个参数<code class="docutils literal notranslate"><span class="pre">plain</span></code>默认为<code class="docutils literal notranslate"><span class="pre">false</span></code>，当其为<code class="docutils literal notranslate"><span class="pre">true</span></code>时，只会把<code class="docutils literal notranslate"><span class="pre">p</span></code>看成一个字符串对待。</p>
+<blockquote>
+<div><p>可能你会奇怪，第四个参数有什么存在的必要吗？p不是本来就应该是个字符串吗？
+实际上，lua中的匹配默认意义是正则匹配，同时，这里的正则与其它语言也有些许不同。</p>
+</div></blockquote>
+<blockquote>
+<div><p>由于篇幅有限，本节和下面的几节涉及匹配内容时，均不会考虑正则的使用方法，Lua正则教程将会在最后几节单独详细地列出来。</p>
+</div></blockquote>
+<p>第四个参数为<code class="docutils literal notranslate"><span class="pre">true</span></code>时，便不会使用正则功能。</p>
+<p>示例代码：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--只会匹配到第一个</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.find</span><span class="p">(</span><span class="s2">"abc abc"</span><span class="p">,</span> <span class="s2">"ab"</span><span class="p">))</span>
+<span class="c1">-- 从索引为2的位置开始匹配字符串：ab</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.find</span><span class="p">(</span><span class="s2">"abc abc"</span><span class="p">,</span> <span class="s2">"ab"</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1">-- 从索引为5的位置开始匹配字符串：ab</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.find</span><span class="p">(</span><span class="s2">"abc abc"</span><span class="p">,</span> <span class="s2">"ab"</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1">--&gt;输出</span>
+<span class="c1">--1  2</span>
+<span class="c1">--5  6</span>
+<span class="c1">--5  6</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知字符串s，里面有很多相同的字符串</p></li>
+<li><p>请找出字符串s中，所有字符串awsl的位置</p></li>
+<li><p>使用print打印结果，结果一行一个</p></li>
+<li><p>如字符串12awslawslaw，输出3和7</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"12awsaslwlaawsllslllswasllalssawwlawslaw"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"两个awsl的位置分别是："</span><span class="p">)</span>
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="string-gsub">
+<h3>string.gsub<a class="headerlink" href="#string-gsub" title="永久链接至标题">¶</a></h3>
+<p>string.gsub(s, p, r [, n])</p>
+<p>将目标字符串<code class="docutils literal notranslate"><span class="pre">s</span></code>中所有的子串<code class="docutils literal notranslate"><span class="pre">p</span></code>替换成字符串r。</p>
+<p>可选参数<code class="docutils literal notranslate"><span class="pre">n</span></code>，表示限制替换次数。</p>
+<p>返回值有两个，第一个是被替换后的字符串，第二个是替换了多少次。</p>
+<blockquote>
+<div><p>特别提示：这个函数的目标字符串s，也是支持正则的</p>
+</div></blockquote>
+<p>下面是例子：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">string.gsub</span><span class="p">(</span><span class="s2">"Lua Lua Lua"</span><span class="p">,</span> <span class="s2">"Lua"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.gsub</span><span class="p">(</span><span class="s2">"Lua Lua Lua"</span><span class="p">,</span> <span class="s2">"Lua"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">--指明第四个参数</span>
+
+<span class="c1">--&gt;打印的结果：</span>
+<span class="c1">-- hello hello hello   3</span>
+<span class="c1">-- hello hello Lua     2</span>
+</pre></div>
+</div>
+<p>同样的，我们也可以使用冒号来简化语法，像下面这样：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"12345"</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">s</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">"2"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>请完成下面的任务：</strong></p>
+<ul class="simple">
+<li><p>已知字符串变量s，请分别打印出（每种一行）：</p></li>
+<li><p>把字符串s中，前5个a，替换为b</p></li>
+<li><p>把字符串s中，前3个c，替换为xxx</p></li>
+<li><p>把结果打印出来，一行数据</p></li>
+</ul>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"asdicagydausckfugdaflgscdabgsdbahhacbshbsd"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"s变换前的值："</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<span class="c1">--补全代码</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id43">
+<h3>正则匹配相关内容等待更新<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="id44">
+<h2>跨文件调用<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
+<div class="section" id="lua5-1">
+<h3>Lua5.1里的用法<a class="headerlink" href="#lua5-1" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>目前模块使用Lua版本是5.1，由于模拟器的版本为5.3，这部分代码语法并不相同，所以这里不提供代码测试功能</p>
+</div></blockquote>
+<p>在编写代码时，随着逻辑逐渐复杂，我们的代码量也会变大。虽然有<code class="docutils literal notranslate"><span class="pre">函数</span></code>可以把一部分代码逻辑封装起来，但是所有代码都放到一个文件里，显然也不是个好办法。</p>
+<p>所以我们需要将一些代码放到不同文件中，通过文件来区分这些代码的功能。</p>
+<p>比如我们有下面这个函数：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">---函数功能：</span>
+<span class="c1">-- 生成从1-max的table</span>
+<span class="c1">-- @输入值：table的最大值</span>
+<span class="c1">-- @返回：  table结果</span>
+<span class="c1">-- @例子：  local list = getNumberList(10)</span>
+<span class="kr">function</span> <span class="nf">getNumberList</span><span class="p">(</span><span class="n">max</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">max</span> <span class="kr">do</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">t</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>我们新建一个文件叫<code class="docutils literal notranslate"><span class="pre">tools.lua</span></code>，把这个函数放进去，现在，整个文件如下面这样：</p>
+<p><code class="docutils literal notranslate"><span class="pre">tools.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--使这个代码在哪个文件里都能被调用</span>
+<span class="n">module</span><span class="p">(...,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeall</span><span class="p">)</span>
+
+<span class="c1">---函数功能：</span>
+<span class="c1">-- 生成从1-max的table</span>
+<span class="c1">-- @输入值：table的最大值</span>
+<span class="c1">-- @返回：  table结果</span>
+<span class="c1">-- @例子：  local list = getNumberList(10)</span>
+<span class="kr">function</span> <span class="nf">getNumberList</span><span class="p">(</span><span class="n">max</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">max</span> <span class="kr">do</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">t</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>现在，我们封装的这个函数就能在其他文件里被调用了，具体代码如下：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--引用tools.lua文件，并加载</span>
+<span class="nb">require</span><span class="s2">"tools"</span>
+
+<span class="kd">local</span> <span class="n">list</span> <span class="o">=</span> <span class="n">tools</span><span class="p">.</span><span class="n">getNumberList</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>当调用了<code class="docutils literal notranslate"><span class="pre">require</span></code>接口后，Lua虚拟机会自动加载你调用的文件，<code class="docutils literal notranslate"><span class="pre">执行文件的内容</span></code>，并<code class="docutils literal notranslate"><span class="pre">返回一个以文件名为变量名的table</span></code>，该<code class="docutils literal notranslate"><span class="pre">table内包含了那个文件里所有非local的变量和函数</span></code>。</p>
+<p>为了更好地理解这段话，我们可以看下面两个文件，其中run.lua是被运行的那个入口文件</p>
+<p><code class="docutils literal notranslate"><span class="pre">test.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--使这个代码在哪个文件里都能被调用</span>
+<span class="n">module</span><span class="p">(...,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeall</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1">--local变量无法被外部调用</span>
+<span class="c1">--但是可以在文件内被调用</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1">--文件在被require的时候，会被执行</span>
+
+<span class="kr">function</span> <span class="nf">addB</span><span class="p">()</span>
+    <span class="c1">--文件内部可以调用变量b</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="kr">return</span> <span class="n">b</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">run.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span><span class="s2">"test"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">a</span><span class="p">)</span><span class="c1">--输出1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">b</span><span class="p">)</span><span class="c1">--输出nil，因为b是local变量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">c</span><span class="p">)</span><span class="c1">--输出3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出5</span>
+</pre></div>
+</div>
+<p>同时，每个文件最多只会被<code class="docutils literal notranslate"><span class="pre">require</span></code>一次，如果有多个<code class="docutils literal notranslate"><span class="pre">require</span></code>，只有第一次会执行</p>
+</div>
+<div class="section" id="lua5-3">
+<h3>Lua5.3里的用法<a class="headerlink" href="#lua5-3" title="永久链接至标题">¶</a></h3>
+<p>在编写代码时，随着逻辑逐渐复杂，我们的代码量也会变大。虽然有<code class="docutils literal notranslate"><span class="pre">函数</span></code>可以把一部分代码逻辑封装起来，但是所有代码都放到一个文件里，显然也不是个好办法。</p>
+<p>所以我们需要将一些代码放到不同文件中，通过文件来区分这些代码的功能。</p>
+<p>比如我们有下面这个函数：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">---函数功能：</span>
+<span class="c1">-- 生成从1-max的table</span>
+<span class="c1">-- @输入值：table的最大值</span>
+<span class="c1">-- @返回：  table结果</span>
+<span class="c1">-- @例子：  local list = getNumberList(10)</span>
+<span class="kr">function</span> <span class="nf">getNumberList</span><span class="p">(</span><span class="n">max</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">max</span> <span class="kr">do</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">t</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>我们新建一个文件叫<code class="docutils literal notranslate"><span class="pre">tools.lua</span></code>，把这个函数放进去，现在，整个文件如下面这样：</p>
+<p><code class="docutils literal notranslate"><span class="pre">tools.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">---函数功能：</span>
+<span class="c1">-- 生成从1-max的table</span>
+<span class="c1">-- @输入值：table的最大值</span>
+<span class="c1">-- @返回：  table结果</span>
+<span class="c1">-- @例子：  local list = getNumberList(10)</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">getNumberList</span><span class="p">(</span><span class="n">max</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">max</span> <span class="kr">do</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">t</span>
+<span class="kr">end</span>
+
+<span class="c1">--手动返回一个table，包含了上面的函数</span>
+<span class="kr">return</span> <span class="p">{</span>
+    <span class="n">getNumberList</span> <span class="o">=</span> <span class="n">getNumberList</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>现在，我们封装的这个函数就能在其他文件里被调用了，具体代码如下：</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--引用tools.lua文件，并加载</span>
+<span class="kd">local</span> <span class="n">tool</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">"tools"</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">list</span> <span class="o">=</span> <span class="n">tool</span><span class="p">.</span><span class="n">getNumberList</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>当调用了<code class="docutils literal notranslate"><span class="pre">require</span></code>接口后，Lua虚拟机会自动加载你调用的文件，<code class="docutils literal notranslate"><span class="pre">执行文件的内容</span></code>，然后<code class="docutils literal notranslate"><span class="pre">返回你文件里return的结果</span></code>。</p>
+<p>为了更好地理解这段话，我们可以看下面两个文件，其中run.lua是被运行的那个入口文件</p>
+<p><code class="docutils literal notranslate"><span class="pre">test.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--以便一会儿返回使用的table</span>
+<span class="kd">local</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">--把全局变量a更改了</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1">--local变量无法被外部调用</span>
+<span class="c1">--但是可以在文件内被调用</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1">--文件在被require的时候，会被执行</span>
+<span class="c1">--把全局变量c更改了</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1">--使函数在table里</span>
+<span class="kr">function</span> <span class="nc">temp</span><span class="p">.</span><span class="nf">addB</span><span class="p">()</span>
+    <span class="c1">--文件内部可以调用变量b</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="kr">return</span> <span class="n">b</span>
+<span class="kr">end</span>
+
+<span class="c1">--返回table</span>
+<span class="kr">return</span> <span class="n">temp</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">run.lua</span></code></p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">test</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">"test"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="c1">--输出1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="c1">--输出nil，因为b是local变量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="c1">--输出3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="n">addB</span><span class="p">())</span><span class="c1">--输出5</span>
+</pre></div>
+</div>
+<p>同时，每个文件最多只会被<code class="docutils literal notranslate"><span class="pre">require</span></code>一次，如果有多个<code class="docutils literal notranslate"><span class="pre">require</span></code>，只有第一次会执行</p>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>待添加<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>table  -&gt; sort排序</p></li>
+<li><p>string -&gt; 正则、gsub、find、match</p></li>
+<li><p>迭代器  for xx in xx  、string.gmatch</p></li>
+<li><p>元表</p></li>
+<li><p>coroutine</p></li>
+</ul>
+<p>↓各种接口↓</p>
+<ul class="simple">
+<li><p>math库</p></li>
+<li><p>os库</p></li>
+<li><p>io库</p></li>
+<li><p>位运算 （&gt;&gt; &lt;&lt;）</p></li>
+<li><p>杂项接口</p></li>
+<li><p>debug库</p></li>
+</ul>
+<script>
+window.onload = function(){
+    //新窗口打开链接，更方便运行Lua代码
+    $(".section").find("a").each(function () {
+        if ($(this).attr("target") !== "_blank") {
+            $(this).attr('target', '_blank');
+        }
+    });
+    //在代码块附近加上快速测试代码链接
+    $("pre").each(function () {
+        if($(this).text().indexOf("print") >= 0)
+            $(this).before('<a class="btn btn-neutral" style="margin-bottom:-15px;" href="https://chenxuuu.gitee.io/lua-online/?'+escape($(this).text())+'" target="_blank">点我快速测试下面的代码</a>');
+    });
+}
+</script></div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="../index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, luatos
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/luaGuide/luaStart.md.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">白话Lua教程</a><ul>
+<li><a class="reference internal" href="#id1">初始</a><ul>
+<li><a class="reference internal" href="#id2">初识Lua</a></li>
+<li><a class="reference internal" href="#id3">第一个 Lua 程序</a></li>
+<li><a class="reference internal" href="#id4">输出数据</a></li>
+<li><a class="reference internal" href="#id5">代码注释</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">变量</a><ul>
+<li><a class="reference internal" href="#number">number变量</a></li>
+<li><a class="reference internal" href="#nil">了解nil</a></li>
+<li><a class="reference internal" href="#id7">赋值语句</a></li>
+<li><a class="reference internal" href="#id8">交换变量</a></li>
+<li><a class="reference internal" href="#id9">输出变量</a></li>
+<li><a class="reference internal" href="#id10">算数运算符</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">字符串</a><ul>
+<li><a class="reference internal" href="#string">string类型变量</a></li>
+<li><a class="reference internal" href="#id12">转义字符</a></li>
+<li><a class="reference internal" href="#id13">string拼接</a></li>
+<li><a class="reference internal" href="#numberstring">number转string</a></li>
+<li><a class="reference internal" href="#stringnumber">string转number</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">逻辑运算</a><ul>
+<li><a class="reference internal" href="#id15">布尔型和比较运算</a></li>
+<li><a class="reference internal" href="#id16">逻辑运算符</a></li>
+<li><a class="reference internal" href="#id17">检验大小（自测题）</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">分支判断</a><ul>
+<li><a class="reference internal" href="#id19">条件判断</a></li>
+<li><a class="reference internal" href="#id20">多条件判断</a></li>
+<li><a class="reference internal" href="#id21">判断三角形合法性（自测题）</a></li>
+<li><a class="reference internal" href="#if">if的判断依据（自测题）</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">函数</a><ul>
+<li><a class="reference internal" href="#id23">初识函数</a></li>
+<li><a class="reference internal" href="#local">local变量</a></li>
+<li><a class="reference internal" href="#id24">函数参数</a></li>
+<li><a class="reference internal" href="#id25">函数返回值</a></li>
+<li><a class="reference internal" href="#id26">判断三角形合法性2（自测题）</a></li>
+<li><a class="reference internal" href="#id27">返回多个值（自测题）</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#table">table</a><ul>
+<li><a class="reference internal" href="#id28">认识数组</a></li>
+<li><a class="reference internal" href="#id29">简单table</a></li>
+<li><a class="reference internal" href="#id30">table下标</a></li>
+<li><a class="reference internal" href="#id31">下标进阶</a></li>
+<li><a class="reference internal" href="#id32">table小测验</a></li>
+<li><a class="reference internal" href="#table2">table小测验2</a></li>
+<li><a class="reference internal" href="#luatable">Lua全局变量与table</a></li>
+<li><a class="reference internal" href="#table3">table小测试3</a></li>
+<li><a class="reference internal" href="#table-concat">table.concat</a></li>
+<li><a class="reference internal" href="#id33">table删减</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">循环</a><ul>
+<li><a class="reference internal" href="#while">while循环</a></li>
+<li><a class="reference internal" href="#for">for循环</a></li>
+<li><a class="reference internal" href="#id35">中断循环</a></li>
+<li><a class="reference internal" href="#id36">循环测试题1（自测题）</a></li>
+<li><a class="reference internal" href="#id37">循环测试题2（自测题）</a></li>
+<li><a class="reference internal" href="#id38">循环测试题3（自测题）</a></li>
+<li><a class="reference internal" href="#id39">循环测试题4（自测题）</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id40">详解string库</a><ul>
+<li><a class="reference internal" href="#string-sub">string.sub</a></li>
+<li><a class="reference internal" href="#string-rep">string.rep</a></li>
+<li><a class="reference internal" href="#string-len">string.len</a></li>
+<li><a class="reference internal" href="#id41">大小写转换</a></li>
+<li><a class="reference internal" href="#string-format">string.format</a></li>
+<li><a class="reference internal" href="#id42">string的本质</a></li>
+<li><a class="reference internal" href="#string-char">string.char</a></li>
+<li><a class="reference internal" href="#string-byte">string.byte</a></li>
+<li><a class="reference internal" href="#string-find">string.find</a></li>
+<li><a class="reference internal" href="#string-gsub">string.gsub</a></li>
+<li><a class="reference internal" href="#id43">正则匹配相关内容等待更新</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id44">跨文件调用</a><ul>
+<li><a class="reference internal" href="#lua5-1">Lua5.1里的用法</a></li>
+<li><a class="reference internal" href="#lua5-3">Lua5.3里的用法</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">待添加</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>
