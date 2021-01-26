@@ -42,6 +42,7 @@
     <script defer="defer" src="../_static/underscore.js"></script>
     <script defer="defer" src="../_static/doctools.js"></script>
     <script defer="defer" src="../_static/js/baidu.js"></script>
+    <script defer="defer" src="../_static/js/a.js"></script>
     <script defer="defer" src="../_static/translations.js"></script>
     <script defer src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
   <body dir="">
@@ -2142,12 +2143,6 @@ lua的字符串每字节可以存储任意的一字节数据。
 </ul>
 <script>
 window.onload = function(){
-    //新窗口打开链接，更方便运行Lua代码
-    $(".section").find("a").each(function () {
-        if ($(this).attr("target") !== "_blank") {
-            $(this).attr('target', '_blank');
-        }
-    });
     //在代码块附近加上快速测试代码链接
     $("pre").each(function () {
         if($(this).text().indexOf("print") >= 0)
@@ -2185,11 +2180,6 @@ window.onload = function(){
 
         <div class="related-information">
               Copyright &#169; 2021, luatos
-            |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
             <a class="muted-link" href="../_sources/luaGuide/luaStart.md.txt"
                rel="nofollow">
