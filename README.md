@@ -1,3 +1,3 @@
 GitHub Pages of [chenxuuu/luatos_wiki](https://github.com/chenxuuu/luatos_wiki.git)
 ===
-Sphinx html documentation of [0bd49136](https://github.com/chenxuuu/luatos_wiki/tree/0bd49136eaa7034dcbfb9ab228ce2649f5adb4d5)
+Sphinx html documentation of [bb43c47f](https://github.com/chenxuuu/luatos_wiki/tree/bb43c47fddff46d88a69a8704968a921aa6dcefb)
