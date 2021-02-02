@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="入门" href="../luaGuide/introduction.html" /><link rel="prev" title="&lt;no title&gt;" href="../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="进阶" href="advanced.html" /><link rel="prev" title="在线体验LuatOS" href="../pages/emulator.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>在线体验LuatOS - LuatOS 文档</title>
+        <title>入门 - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -96,7 +96,7 @@
       <a href="../index.html"><div class="brand">LuatOS  文档</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -118,15 +118,15 @@
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption"><span class="caption-text">LuatOS 介绍</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference external" href="https://luatos.wiki">首页</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">在线体验LuatOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/emulator.html">在线体验LuatOS</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lua 教程</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../luaGuide/introduction.html">入门</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../luaGuide/advanced.html">进阶</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../luaGuide/source.html">与c语言交互</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">进阶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">与c语言交互</a></li>
 </ul>
 
 </div>
@@ -138,55 +138,65 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="luatos">
-<h1>在线体验LuatOS<a class="headerlink" href="#luatos" title="永久链接至标题">¶</a></h1>
-<p>LuatOS提供了在线模拟器，可快速体验开发流程、熟悉开发接口、在线实验新奇的想法。</p>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 28%"/>
-<col style="width: 21%"/>
-<col style="width: 24%"/>
-<col style="width: 28%"/>
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="https://luatos.wiki/_static/luatos-emulator/log.html"><img alt="i1" src="../_images/log.svg" width="100"/></a></p></td>
-<td><p><a class="reference external" href="https://luatos.wiki/_static/luatos-emulator/task.html"><img alt="i2" src="../_images/task.svg" width="100"/></a></p></td>
-<td><p><a class="reference external" href="https://luatos.wiki/_static/luatos-emulator/led.html"><img alt="i3" src="../_images/led.svg" width="100"/></a></p></td>
-<td><p><a class="reference external" href="https://luatos.wiki/_static/luatos-emulator/key.html"><img alt="i4" src="../_images/key.svg" width="100"/></a></p></td>
-</tr>
-<tr class="row-even"><td><p>日志输出</p></td>
-<td><p>多任务</p></td>
-<td><p>LED控制</p></td>
-<td><p>按键输入</p></td>
-</tr>
-</tbody>
-</table></div>
+        <div class="section" id="id1">
+<h1>入门<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="lua">
+<h2>Lua简介<a class="headerlink" href="#lua" title="永久链接至标题">¶</a></h2>
+<p>Lua可以说是目前嵌入式方案中，资源占用 <strong>最小</strong> 、运行效率 <strong>最高</strong> 、语法 <strong>最简洁</strong> 的一门脚本语言。</p>
+<p>对于编程小白来说，它适合作为你的编程入门语言，因为语法简单。对于会c语言的老手来说，它与c可以完美契合，再加上LuatOS本身就是开源，你可以轻松地使用c为其添加一套c库接口，享受它的高效。</p>
+</div>
+<div class="section" id="id2">
+<h2>变量<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>变量名<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>什么是 <strong>变量</strong> ？变量就是某种数据，而每一个装了某种数据的容器，都要拥有者自己的容器名字，这个名字被我们称之为 <strong>变量名</strong>。</p>
+<p>也就是说，每个 <strong>变量名</strong> 都，可以直接代表某一个 <strong>变量</strong> 。</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/vars.svg" src="../_images/vars.svg"/><p class="caption"><span class="caption-text">酒的名字与实际杯子里的液体对应</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+</div>
+<p>像上图，我们可以直接用酒的名字，来称呼一杯酒；而直接称呼 <strong>变量名</strong> ，也代表着使用某个 <strong>变量</strong> 。</p>
+</div>
+<div class="section" id="number">
+<h3>number类型<a class="headerlink" href="#number" title="永久链接至标题">¶</a></h3>
+<p>变量是有类型的，我们这里先只教一种类型： <strong>数值型（number）</strong> 。</p>
+<p>顾名思义，数值型，存储的就是数字。</p>
+<p>比如下面的这些数据，都是数值型：</p>
+<ul class="simple">
+<li><p>1</p></li>
+<li><p>123</p></li>
+<li><p>234</p></li>
+<li><p>1.234</p></li>
+<li><p>10000000</p></li>
+</ul>
+<p>睡了，待续</p>
+</div>
+</div>
 </div>
 
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../luaGuide/introduction.html">
+          <a class="next-page" href="advanced.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">入门</div>
+                <div class="title">进阶</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="../pages/emulator.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">在线体验LuatOS</div>
                 
               </div>
             </a>
@@ -195,7 +205,7 @@
         <div class="related-information">
               Copyright &#169; 2021, luatos
             |
-            <a class="muted-link" href="../_sources/pages/emulator.rst.txt"
+            <a class="muted-link" href="../_sources/luaGuide/introduction.rst.txt"
                rel="nofollow">
               显示源代码
             </a>
@@ -203,8 +213,32 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">入门</a><ul>
+<li><a class="reference internal" href="#lua">Lua简介</a></li>
+<li><a class="reference internal" href="#id2">变量</a><ul>
+<li><a class="reference internal" href="#id3">变量名</a></li>
+<li><a class="reference internal" href="#number">number类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
