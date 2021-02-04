@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="wlan" href="wlan.html" /><link rel="prev" title="与c语言交互" href="../luaGuide/source.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="ctiot" href="ctiot.html" /><link rel="prev" title="u8g2" href="u8g2.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>LuatOS接口文档 - LuatOS 文档</title>
+        <title>pwm - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -97,7 +97,7 @@
       <a href="../index.html"><div class="brand">LuatOS  文档</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -131,7 +131,7 @@
 </ul>
 <p class="caption"><span class="caption-text">api 文档</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uart.html">uart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="socket.html">socket</a></li>
@@ -150,7 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timer.html">timer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">pwm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pm.html">pm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap</a></li>
@@ -167,13 +167,123 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="luatos">
-<h1>LuatOS接口文档<a class="headerlink" href="#luatos" title="永久链接至标题">¶</a></h1>
-<p>请点击左侧列表，查看各个接口。如需搜索，请直接使用左上角的搜索框进行搜索。</p>
-<div class="toctree-wrapper compound">
+        <div class="section" id="pwm">
+<h1>pwm<a class="headerlink" href="#pwm" title="永久链接至标题">¶</a></h1>
+<p>PWM模块</p>
+<div class="section" id="pwm-open-channel-period-pulse">
+<h2>pwm.open(channel, period, pulse)<a class="headerlink" href="#pwm-open-channel-period-pulse" title="永久链接至标题">¶</a></h2>
+<p>开启指定的PWM通道</p>
+<div class="section" id="id1">
+<h3>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 37%"/>
+<col style="width: 63%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>传入值类型</p></th>
+<th class="head"><p>解释</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>PWM通道</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>频率, 1-1000000hz</p></td>
+</tr>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>占空比 0-100</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="id2">
+<h3>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 37%"/>
+<col style="width: 63%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>返回值类型</p></th>
+<th class="head"><p>解释</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>PWM通道</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>频率, 1-1000000hz</p></td>
+</tr>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>占空比 0-100</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="id3">
+<span id="id4"></span><h3>返回值<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 打开PWM5, 频率1kHz, 占空比50%</span>
+<span class="n">pwm</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils"/>
+<div class="section" id="pwm-close-channel">
+<h2>pwm.close(channel)<a class="headerlink" href="#pwm-close-channel" title="永久链接至标题">¶</a></h2>
+<p>关闭指定的PWM通道</p>
+<div class="section" id="id5">
+<span id="id6"></span><h3>参数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 59%"/>
+<col style="width: 41%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>传入值类型</p></th>
+<th class="head"><p>解释</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>PWM通道</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="id7">
+<span id="id8"></span><h3>返回值<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 59%"/>
+<col style="width: 41%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>返回值类型</p></th>
+<th class="head"><p>解释</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>PWM通道</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="id9">
+<span id="id10"></span><h3>返回值<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 关闭PWM5</span>
+<span class="n">pwm</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils"/>
+</div>
 </div>
 </div>
 
@@ -181,23 +291,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="wlan.html">
+          <a class="next-page" href="ctiot.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">wlan</div>
+                <div class="title">ctiot</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../luaGuide/source.html">
+          <a class="prev-page" href="u8g2.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">与c语言交互</div>
+                <div class="title">u8g2</div>
                 
               </div>
             </a>
@@ -206,7 +316,7 @@
         <div class="related-information">
               Copyright &#169; 2021, luatos
             |
-            <a class="muted-link" href="../_sources/api/index.rst.txt"
+            <a class="muted-link" href="../_sources/api/pwm.rst.txt"
                rel="nofollow">
               显示源代码
             </a>
@@ -214,8 +324,38 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">pwm</a><ul>
+<li><a class="reference internal" href="#pwm-open-channel-period-pulse">pwm.open(channel, period, pulse)</a><ul>
+<li><a class="reference internal" href="#id1">参数</a></li>
+<li><a class="reference internal" href="#id2">返回值</a></li>
+<li><a class="reference internal" href="#id3">返回值</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pwm-close-channel">pwm.close(channel)</a><ul>
+<li><a class="reference internal" href="#id5">参数</a></li>
+<li><a class="reference internal" href="#id7">返回值</a></li>
+<li><a class="reference internal" href="#id9">返回值</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
