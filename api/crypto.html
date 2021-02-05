@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="lpmem" href="lpmem.html" /><link rel="prev" title="http" href="http.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="lpmem - 操作低功耗不掉电内存块" href="lpmem.html" /><link rel="prev" title="http - 执行http请求" href="http.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>crypto - LuatOS 文档</title>
+        <title>crypto - 加解密和hash函数 - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -132,28 +132,28 @@
 <p class="caption"><span class="caption-text">api 文档</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uart.html">uart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="socket.html">socket</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http.html">http</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">crypto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eink.html">eink</a></li>
-<li class="toctree-l2"><a class="reference internal" href="disp.html">disp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spi.html">spi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adc.html">adc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="timer.html">timer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pm.html">pm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan - wifi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart.html">uart - 串口操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socket.html">socket - socket操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor - 传感器操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http.html">http - 执行http请求</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">crypto - 加解密和hash函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem - 操作低功耗不掉电内存块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">log - 日志库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eink.html">eink - 墨水屏操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disp.html">disp - 显示屏控制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss - NMEA数据处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c - I2C操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi.html">spi - spi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adc.html">adc - 数模转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio - GPIO操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos - RTOS底层操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timer.html">timer - 操作底层定时器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2 - u8g2图形处理库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm - PWM模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot - 中国电信CTIOT集成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm.html">pm - 电源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap - coap数据处理</a></li>
 </ul>
 </li>
 </ul>
@@ -170,14 +170,12 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="crypto">
-<h1>crypto<a class="headerlink" href="#crypto" title="永久链接至标题">¶</a></h1>
-<p>加解密和hash函数</p>
+        <div class="section" id="crypto-hash">
+<h1>crypto - 加解密和hash函数<a class="headerlink" href="#crypto-hash" title="永久链接至标题">¶</a></h1>
 <div class="section" id="crypto-md5-str">
 <h2>crypto.md5(str)<a class="headerlink" href="#crypto-md5-str" title="永久链接至标题">¶</a></h2>
 <p>计算md5值</p>
-<div class="section" id="id1">
-<h3>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 38%"/>
@@ -194,13 +192,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id2">
-<h3>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 38%"/>
-<col style="width: 62%"/>
+<col style="width: 28%"/>
+<col style="width: 72%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -209,25 +205,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>需要计算的字符串</p></td>
+<td><p>计算得出的md5值的hex字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id3">
-<span id="id4"></span><h3>返回值<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算字符串"abc"的md5</span>
 <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"md5"</span><span class="p">,</span> <span class="n">crypto</span><span class="p">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">))</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-hmac-md5-str-key">
 <h2>crypto.hmac_md5(str, key)<a class="headerlink" href="#crypto-hmac-md5-str-key" title="永久链接至标题">¶</a></h2>
 <p>计算hmac_md5值</p>
-<div class="section" id="id5">
-<span id="id6"></span><h3>参数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 38%"/>
@@ -247,13 +239,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id7">
-<span id="id8"></span><h3>返回值<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 38%"/>
-<col style="width: 62%"/>
+<col style="width: 24%"/>
+<col style="width: 76%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -262,28 +252,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>需要计算的字符串</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>密钥</p></td>
+<td><p>计算得出的hmac_md5值的hex字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id9">
-<span id="id10"></span><h3>返回值<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算字符串"abc"的hmac_md5</span>
 <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"hmac_md5"</span><span class="p">,</span> <span class="n">crypto</span><span class="p">.</span><span class="n">hmac_md5</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">,</span> <span class="s2">"1234567890"</span><span class="p">))</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-sha1-str">
 <h2>crypto.sha1(str)<a class="headerlink" href="#crypto-sha1-str" title="永久链接至标题">¶</a></h2>
 <p>计算sha1值</p>
-<div class="section" id="id11">
-<span id="id12"></span><h3>参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 38%"/>
@@ -300,13 +283,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id13">
-<span id="id14"></span><h3>返回值<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 38%"/>
-<col style="width: 62%"/>
+<col style="width: 27%"/>
+<col style="width: 73%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -315,25 +296,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>需要计算的字符串</p></td>
+<td><p>计算得出的sha1值的hex字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id15">
-<span id="id16"></span><h3>返回值<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算字符串"abc"的sha1</span>
 <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"sha1"</span><span class="p">,</span> <span class="n">crypto</span><span class="p">.</span><span class="n">sha1</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">))</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-hmac-sha1-str-key">
 <h2>crypto.hmac_sha1(str, key)<a class="headerlink" href="#crypto-hmac-sha1-str-key" title="永久链接至标题">¶</a></h2>
 <p>计算hmac_sha1值</p>
-<div class="section" id="id17">
-<span id="id18"></span><h3>参数<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 38%"/>
@@ -353,13 +330,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id19">
-<span id="id20"></span><h3>返回值<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 38%"/>
-<col style="width: 62%"/>
+<col style="width: 24%"/>
+<col style="width: 76%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -368,28 +343,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>需要计算的字符串</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>密钥</p></td>
+<td><p>计算得出的hmac_sha1值的hex字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id21">
-<span id="id22"></span><h3>返回值<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算字符串"abc"的hmac_sha1</span>
 <span class="n">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"hmac_sha1"</span><span class="p">,</span> <span class="n">crypto</span><span class="p">.</span><span class="n">hmac_sha1</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">,</span> <span class="s2">"1234567890"</span><span class="p">))</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-cipher-type-padding-str-key-iv">
 <h2>crypto.cipher(type, padding, str, key, iv)<a class="headerlink" href="#crypto-cipher-type-padding-str-key-iv" title="永久链接至标题">¶</a></h2>
 <p>对称加密</p>
-<div class="section" id="id23">
-<span id="id24"></span><h3>参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 18%"/>
@@ -419,13 +387,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id25">
-<span id="id26"></span><h3>返回值<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 18%"/>
-<col style="width: 82%"/>
+<col style="width: 42%"/>
+<col style="width: 58%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -434,26 +400,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>算法名称, 例如 AES-128-ECB/AES-128-CBC,
-可查阅mbedtls的cipher_wrap.c</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>对齐方式, 当前仅支持PKCS7</p></td>
-</tr>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>需要加密的数据</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>密钥,需要对应算法的密钥长度</p></td>
-</tr>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>IV值, 非ECB算法需要</p></td>
+<td><p>加密后的字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id27">
-<span id="id28"></span><h3>返回值<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算AES</span>
 <span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">cipher_encrypt</span><span class="p">(</span><span class="s2">"AES-128-ECB"</span><span class="p">,</span> <span class="s2">"PKCS7"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">cipher_encrypt</span><span class="p">(</span><span class="s2">"AES-128-CBC"</span><span class="p">,</span> <span class="s2">"PKCS7"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">,</span> <span class="s2">"1234567890666666"</span><span class="p">)</span>
@@ -461,12 +412,10 @@
 </div>
 <hr class="docutils"/>
 </div>
-</div>
 <div class="section" id="crypto-ciphertype-padding-str-key-iv-1">
-<span id="id29"></span><h2>crypto.cipher(type, padding, str, key, iv)<a class="headerlink" href="#crypto-ciphertype-padding-str-key-iv-1" title="永久链接至标题">¶</a></h2>
+<span id="id1"></span><h2>crypto.cipher(type, padding, str, key, iv)<a class="headerlink" href="#crypto-ciphertype-padding-str-key-iv-1" title="永久链接至标题">¶</a></h2>
 <p>对称解密</p>
-<div class="section" id="id30">
-<span id="id31"></span><h3>参数<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 18%"/>
@@ -496,13 +445,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id32">
-<span id="id33"></span><h3>返回值<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 18%"/>
-<col style="width: 82%"/>
+<col style="width: 42%"/>
+<col style="width: 58%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -511,26 +458,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>string</p></td>
-<td><p>算法名称, 例如 AES-128-ECB/AES-128-CBC,
-可查阅mbedtls的cipher_wrap.c</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>对齐方式, 当前仅支持PKCS7</p></td>
-</tr>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>需要解密的数据</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>密钥,需要对应算法的密钥长度</p></td>
-</tr>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>IV值, 非ECB算法需要</p></td>
+<td><p>解密后的字符串</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id34">
-<span id="id35"></span><h3>返回值<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 用AES加密,然后用AES解密</span>
 <span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">cipher_encrypt</span><span class="p">(</span><span class="s2">"AES-128-ECB"</span><span class="p">,</span> <span class="s2">"PKCS7"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">cipher_encrypt</span><span class="p">(</span><span class="s2">"AES-128-ECB"</span><span class="p">,</span> <span class="s2">"PKCS7"</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="s2">"1234567890123456"</span><span class="p">)</span>
@@ -539,13 +471,11 @@
 </pre></div>
 </div>
 </div>
-</div>
 <hr class="docutils"/>
 <div class="section" id="crypto-crc16-method-data-poly-initial-finally-inreversem-outreverse">
 <h2>crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)<a class="headerlink" href="#crypto-crc16-method-data-poly-initial-finally-inreversem-outreverse" title="永久链接至标题">¶</a></h2>
 <p>计算CRC16</p>
-<div class="section" id="id36">
-<span id="id37"></span><h3>参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 28%"/>
@@ -580,13 +510,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id38">
-<span id="id39"></span><h3>返回值<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 28%"/>
-<col style="width: 72%"/>
+<col style="width: 43%"/>
+<col style="width: 57%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -594,44 +522,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>输入模式</p></td>
-</tr>
-<tr class="row-odd"><td><p>string</p></td>
-<td><p>字符串</p></td>
-</tr>
 <tr class="row-even"><td><p>int</p></td>
-<td><p>poly值</p></td>
-</tr>
-<tr class="row-odd"><td><p>int</p></td>
-<td><p>initial值</p></td>
-</tr>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>finally值</p></td>
-</tr>
-<tr class="row-odd"><td><p>int</p></td>
-<td><p>输入反转,1反转,默认0不反转</p></td>
-</tr>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>输入反转,1反转,默认0不反转</p></td>
+<td><p>对应的CRC16值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id40">
-<span id="id41"></span><h3>返回值<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算CRC16</span>
 <span class="kd">local</span> <span class="n">crc</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">crc16</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-crc16-modbus-data">
 <h2>crypto.crc16_modbus(data)<a class="headerlink" href="#crypto-crc16-modbus-data" title="永久链接至标题">¶</a></h2>
 <p>直接计算modbus的crc16值</p>
-<div class="section" id="id42">
-<span id="id43"></span><h3>参数<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 71%"/>
@@ -648,13 +554,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id44">
-<span id="id45"></span><h3>返回值<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 71%"/>
-<col style="width: 29%"/>
+<col style="width: 43%"/>
+<col style="width: 57%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -662,26 +566,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>数据</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>对应的CRC16值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id46">
-<span id="id47"></span><h3>返回值<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算CRC16 modbus</span>
 <span class="kd">local</span> <span class="n">crc</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">crc16_modbus</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-crc32-data">
 <h2>crypto.crc32(data)<a class="headerlink" href="#crypto-crc32-data" title="永久链接至标题">¶</a></h2>
 <p>计算crc32值</p>
-<div class="section" id="id48">
-<span id="id49"></span><h3>参数<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 71%"/>
@@ -698,13 +598,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id50">
-<span id="id51"></span><h3>返回值<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 71%"/>
-<col style="width: 29%"/>
+<col style="width: 43%"/>
+<col style="width: 57%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -712,26 +610,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>数据</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>对应的CRC32值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id52">
-<span id="id53"></span><h3>返回值<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算CRC32</span>
 <span class="kd">local</span> <span class="n">crc</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="crypto-crc8-data">
 <h2>crypto.crc8(data)<a class="headerlink" href="#crypto-crc8-data" title="永久链接至标题">¶</a></h2>
 <p>计算crc8值</p>
-<div class="section" id="id54">
-<span id="id55"></span><h3>参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 71%"/>
@@ -748,13 +642,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id56">
-<span id="id57"></span><h3>返回值<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 71%"/>
-<col style="width: 29%"/>
+<col style="width: 45%"/>
+<col style="width: 55%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -762,20 +654,17 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>数据</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>对应的CRC8值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id58">
-<span id="id59"></span><h3>返回值<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 计算CRC8</span>
 <span class="kd">local</span> <span class="n">crc</span> <span class="o">=</span> <span class="n">crypto</span><span class="p">.</span><span class="n">crc8</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <hr class="docutils"/>
-</div>
 </div>
 </div>
 
@@ -788,7 +677,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">lpmem</div>
+                <div class="title">lpmem - 操作低功耗不掉电内存块</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -799,7 +688,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">http</div>
+                <div class="title">http - 执行http请求</div>
                 
               </div>
             </a>
@@ -828,67 +717,17 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">crypto</a><ul>
-<li><a class="reference internal" href="#crypto-md5-str">crypto.md5(str)</a><ul>
-<li><a class="reference internal" href="#id1">参数</a></li>
-<li><a class="reference internal" href="#id2">返回值</a></li>
-<li><a class="reference internal" href="#id3">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-hmac-md5-str-key">crypto.hmac_md5(str, key)</a><ul>
-<li><a class="reference internal" href="#id5">参数</a></li>
-<li><a class="reference internal" href="#id7">返回值</a></li>
-<li><a class="reference internal" href="#id9">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-sha1-str">crypto.sha1(str)</a><ul>
-<li><a class="reference internal" href="#id11">参数</a></li>
-<li><a class="reference internal" href="#id13">返回值</a></li>
-<li><a class="reference internal" href="#id15">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-hmac-sha1-str-key">crypto.hmac_sha1(str, key)</a><ul>
-<li><a class="reference internal" href="#id17">参数</a></li>
-<li><a class="reference internal" href="#id19">返回值</a></li>
-<li><a class="reference internal" href="#id21">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-cipher-type-padding-str-key-iv">crypto.cipher(type, padding, str, key, iv)</a><ul>
-<li><a class="reference internal" href="#id23">参数</a></li>
-<li><a class="reference internal" href="#id25">返回值</a></li>
-<li><a class="reference internal" href="#id27">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-ciphertype-padding-str-key-iv-1">crypto.cipher(type, padding, str, key, iv)</a><ul>
-<li><a class="reference internal" href="#id30">参数</a></li>
-<li><a class="reference internal" href="#id32">返回值</a></li>
-<li><a class="reference internal" href="#id34">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-crc16-method-data-poly-initial-finally-inreversem-outreverse">crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)</a><ul>
-<li><a class="reference internal" href="#id36">参数</a></li>
-<li><a class="reference internal" href="#id38">返回值</a></li>
-<li><a class="reference internal" href="#id40">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-crc16-modbus-data">crypto.crc16_modbus(data)</a><ul>
-<li><a class="reference internal" href="#id42">参数</a></li>
-<li><a class="reference internal" href="#id44">返回值</a></li>
-<li><a class="reference internal" href="#id46">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-crc32-data">crypto.crc32(data)</a><ul>
-<li><a class="reference internal" href="#id48">参数</a></li>
-<li><a class="reference internal" href="#id50">返回值</a></li>
-<li><a class="reference internal" href="#id52">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#crypto-crc8-data">crypto.crc8(data)</a><ul>
-<li><a class="reference internal" href="#id54">参数</a></li>
-<li><a class="reference internal" href="#id56">返回值</a></li>
-<li><a class="reference internal" href="#id58">返回值</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">crypto - 加解密和hash函数</a><ul>
+<li><a class="reference internal" href="#crypto-md5-str">crypto.md5(str)</a></li>
+<li><a class="reference internal" href="#crypto-hmac-md5-str-key">crypto.hmac_md5(str, key)</a></li>
+<li><a class="reference internal" href="#crypto-sha1-str">crypto.sha1(str)</a></li>
+<li><a class="reference internal" href="#crypto-hmac-sha1-str-key">crypto.hmac_sha1(str, key)</a></li>
+<li><a class="reference internal" href="#crypto-cipher-type-padding-str-key-iv">crypto.cipher(type, padding, str, key, iv)</a></li>
+<li><a class="reference internal" href="#crypto-ciphertype-padding-str-key-iv-1">crypto.cipher(type, padding, str, key, iv)</a></li>
+<li><a class="reference internal" href="#crypto-crc16-method-data-poly-initial-finally-inreversem-outreverse">crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)</a></li>
+<li><a class="reference internal" href="#crypto-crc16-modbus-data">crypto.crc16_modbus(data)</a></li>
+<li><a class="reference internal" href="#crypto-crc32-data">crypto.crc32(data)</a></li>
+<li><a class="reference internal" href="#crypto-crc8-data">crypto.crc8(data)</a></li>
 </ul>
 </li>
 </ul>

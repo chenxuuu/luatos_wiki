@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="pwm" href="pwm.html" /><link rel="prev" title="timer" href="timer.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="pwm - PWM模块" href="pwm.html" /><link rel="prev" title="timer - 操作底层定时器" href="timer.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>u8g2 - LuatOS 文档</title>
+        <title>u8g2 - u8g2图形处理库 - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -132,28 +132,28 @@
 <p class="caption"><span class="caption-text">api 文档</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uart.html">uart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="socket.html">socket</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http.html">http</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eink.html">eink</a></li>
-<li class="toctree-l2"><a class="reference internal" href="disp.html">disp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spi.html">spi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adc.html">adc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="timer.html">timer</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">u8g2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pm.html">pm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan - wifi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart.html">uart - 串口操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socket.html">socket - socket操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor - 传感器操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http.html">http - 执行http请求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto - 加解密和hash函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem - 操作低功耗不掉电内存块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">log - 日志库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eink.html">eink - 墨水屏操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disp.html">disp - 显示屏控制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss - NMEA数据处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c - I2C操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi.html">spi - spi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adc.html">adc - 数模转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio - GPIO操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos - RTOS底层操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timer.html">timer - 操作底层定时器</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">u8g2 - u8g2图形处理库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm - PWM模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot - 中国电信CTIOT集成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm.html">pm - 电源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap - coap数据处理</a></li>
 </ul>
 </li>
 </ul>
@@ -170,14 +170,12 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="u8g2">
-<h1>u8g2<a class="headerlink" href="#u8g2" title="永久链接至标题">¶</a></h1>
-<p>u8g2图形处理库</p>
+        <div class="section" id="u8g2-u8g2">
+<h1>u8g2 - u8g2图形处理库<a class="headerlink" href="#u8g2-u8g2" title="永久链接至标题">¶</a></h1>
 <div class="section" id="u8g2-begin-ssd1306">
 <h2>u8g2.begin(“ssd1306”)<a class="headerlink" href="#u8g2-begin-ssd1306" title="永久链接至标题">¶</a></h2>
 <p>u8g2显示屏初始化</p>
-<div class="section" id="id1">
-<h3>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 56%"/>
@@ -194,13 +192,11 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id2">
-<h3>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 56%"/>
-<col style="width: 44%"/>
+<col style="width: 16%"/>
+<col style="width: 84%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -208,86 +204,64 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>string</p></td>
-<td><p>配置信息</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>正常初始化1,已经初始化过2,内存不够3,初始化失败返回4</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id3">
-<span id="id4"></span><h3>返回值<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 初始化i2c1的ssd1306</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s2">"ssd1306"</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-close">
 <h2>u8g2.close()<a class="headerlink" href="#u8g2-close" title="永久链接至标题">¶</a></h2>
 <p>关闭显示屏</p>
-<div class="section" id="id5">
-<span id="id6"></span><h3>参数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id7">
-<span id="id8"></span><h3>返回值<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id9">
-<span id="id10"></span><h3>返回值<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 关闭disp,再次使用disp相关API的话,需要重新初始化</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-clearbuffer">
 <h2>u8g2.ClearBuffer() 清除内存帧缓冲区中的所有像素。<a class="headerlink" href="#u8g2-clearbuffer" title="永久链接至标题">¶</a></h2>
 <p>清屏</p>
-<div class="section" id="id11">
-<span id="id12"></span><h3>参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id13">
-<span id="id14"></span><h3>返回值<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id15">
-<span id="id16"></span><h3>返回值<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 清屏</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">ClearBuffer</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-sendbuffer">
 <h2>u8g2.SendBuffer() 将存储器帧缓冲区的内容发送到显示器。<a class="headerlink" href="#u8g2-sendbuffer" title="永久链接至标题">¶</a></h2>
 <p>将数据更新到屏幕</p>
-<div class="section" id="id17">
-<span id="id18"></span><h3>参数<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id19">
-<span id="id20"></span><h3>返回值<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id21">
-<span id="id22"></span><h3>返回值<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 把显示数据更新到屏幕</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">SendBuffer</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawutf8-str-x-y-u8g2-sendbuffer">
 <h2>u8g2.DrawUTF8(str, x, y) 在显示屏上画一段文字,要调用u8g2.SendBuffer()才会更新到屏幕<a class="headerlink" href="#u8g2-drawutf8-str-x-y-u8g2-sendbuffer" title="永久链接至标题">¶</a></h2>
 <p>在显示屏上画一段文字</p>
-<div class="section" id="id23">
-<span id="id24"></span><h3>参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 56%"/>
@@ -310,24 +284,18 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id25">
-<span id="id26"></span><h3>返回值<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id27">
-<span id="id28"></span><h3>返回值<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawUTF8</span><span class="p">(</span><span class="s2">"wifi is ready"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-setfontmode-mode">
 <h2>u8g2.SetFontMode(mode)<a class="headerlink" href="#u8g2-setfontmode-mode" title="永久链接至标题">¶</a></h2>
 <p>设置字体模式</p>
-<div class="section" id="id29">
-<span id="id30"></span><h3>参数<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 19%"/>
@@ -344,24 +312,18 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id31">
-<span id="id32"></span><h3>返回值<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id33">
-<span id="id34"></span><h3>返回值<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">SetFontMode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-setfont-font">
 <h2>u8g2.SetFont(font)<a class="headerlink" href="#u8g2-setfont-font" title="永久链接至标题">¶</a></h2>
 <p>设置字体</p>
-<div class="section" id="id35">
-<span id="id36"></span><h3>参数<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 50%"/>
@@ -382,33 +344,25 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id37">
-<span id="id38"></span><h3>返回值<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id39">
-<span id="id40"></span><h3>返回值<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_base.h开启#define USE_U8G2_WQY12_T_GB2312</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">setFont</span><span class="p">(</span><span class="s2">"u8g2_font_wqy12_t_gb2312"</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-getdisplayheight">
 <h2>u8g2.GetDisplayHeight()<a class="headerlink" href="#u8g2-getdisplayheight" title="永久链接至标题">¶</a></h2>
 <p>获取显示屏高度</p>
-<div class="section" id="id41">
-<span id="id42"></span><h3>参数<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id43">
-<span id="id44"></span><h3>返回值<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 71%"/>
-<col style="width: 29%"/>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -416,33 +370,27 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td></td>
-<td></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>显示屏高度</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id45">
-<span id="id46"></span><h3>返回值<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">GetDisplayHeight</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-getdisplaywidth">
 <h2>u8g2.GetDisplayWidth()<a class="headerlink" href="#u8g2-getdisplaywidth" title="永久链接至标题">¶</a></h2>
 <p>获取显示屏宽度</p>
-<div class="section" id="id47">
-<span id="id48"></span><h3>参数<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id49">
-<span id="id50"></span><h3>返回值<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 71%"/>
-<col style="width: 29%"/>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -450,25 +398,21 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td></td>
-<td></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>显示屏宽度</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id51">
-<span id="id52"></span><h3>返回值<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">GetDisplayWidth</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawline-x0-y0-x1-y1">
 <h2>u8g2.DrawLine(x0,y0,x1,y1)<a class="headerlink" href="#u8g2-drawline-x0-y0-x1-y1" title="永久链接至标题">¶</a></h2>
 <p>在两点之间画一条线.</p>
-<div class="section" id="id53">
-<span id="id54"></span><h3>参数<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 38%"/>
@@ -494,24 +438,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id55">
-<span id="id56"></span><h3>返回值<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id57">
-<span id="id58"></span><h3>返回值<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawLine</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawcircle-x0-y0-rad-opt">
 <h2>u8g2.DrawCircle(x0,y0,rad,opt)<a class="headerlink" href="#u8g2-drawcircle-x0-y0-rad-opt" title="永久链接至标题">¶</a></h2>
 <p>在x,y位置画一个半径为rad的空心圆.</p>
-<div class="section" id="id59">
-<span id="id60"></span><h3>参数<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 34%"/>
@@ -537,24 +475,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id61">
-<span id="id62"></span><h3>返回值<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id63">
-<span id="id64"></span><h3>返回值<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>无
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawdisc-x0-y0-rad-opt">
 <h2>u8g2.DrawDisc(x0,y0,rad,opt)<a class="headerlink" href="#u8g2-drawdisc-x0-y0-rad-opt" title="永久链接至标题">¶</a></h2>
 <p>在x,y位置画一个半径为rad的实心圆.</p>
-<div class="section" id="id65">
-<span id="id66"></span><h3>参数<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 34%"/>
@@ -580,24 +512,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id67">
-<span id="id68"></span><h3>返回值<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id69">
-<span id="id70"></span><h3>返回值<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>无
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawellipse-x0-y0-rx-ry-opt">
 <h2>u8g2.DrawEllipse(x0,y0,rx,ry,opt)<a class="headerlink" href="#u8g2-drawellipse-x0-y0-rx-ry-opt" title="永久链接至标题">¶</a></h2>
 <p>在x,y位置画一个半径为rad的空心椭圆.</p>
-<div class="section" id="id71">
-<span id="id72"></span><h3>参数<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 34%"/>
@@ -626,24 +552,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id73">
-<span id="id74"></span><h3>返回值<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id75">
-<span id="id76"></span><h3>返回值<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>无
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawfilledellipse-x0-y0-rx-ry-opt">
 <h2>u8g2.DrawFilledEllipse(x0,y0,rx,ry,opt)<a class="headerlink" href="#u8g2-drawfilledellipse-x0-y0-rx-ry-opt" title="永久链接至标题">¶</a></h2>
 <p>在x,y位置画一个半径为rad的实心椭圆.</p>
-<div class="section" id="id77">
-<span id="id78"></span><h3>参数<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 34%"/>
@@ -672,24 +592,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id79">
-<span id="id80"></span><h3>返回值<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id81">
-<span id="id82"></span><h3>返回值<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>无
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawbox-x-y-w-h">
 <h2>u8g2.DrawBox(x,y,w,h)<a class="headerlink" href="#u8g2-drawbox-x-y-w-h" title="永久链接至标题">¶</a></h2>
 <p>从x / y位置（左上边缘）开始绘制一个框（填充的框）.</p>
-<div class="section" id="id83">
-<span id="id84"></span><h3>参数<a class="headerlink" href="#id83" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 40%"/>
@@ -715,24 +629,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id85">
-<span id="id86"></span><h3>返回值<a class="headerlink" href="#id85" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id87">
-<span id="id88"></span><h3>返回值<a class="headerlink" href="#id87" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawBox</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawframe-x-y-w-h">
 <h2>u8g2.DrawFrame(x,y,w,h)<a class="headerlink" href="#u8g2-drawframe-x-y-w-h" title="永久链接至标题">¶</a></h2>
 <p>从x / y位置（左上边缘）开始绘制一个框（空框）.</p>
-<div class="section" id="id89">
-<span id="id90"></span><h3>参数<a class="headerlink" href="#id89" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 40%"/>
@@ -758,24 +666,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id91">
-<span id="id92"></span><h3>返回值<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id93">
-<span id="id94"></span><h3>返回值<a class="headerlink" href="#id93" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawFrame</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawrbox-x-y-w-h-r">
 <h2>u8g2.DrawRBox(x,y,w,h,r)<a class="headerlink" href="#u8g2-drawrbox-x-y-w-h-r" title="永久链接至标题">¶</a></h2>
 <p>绘制一个从x / y位置（左上边缘）开始具有圆形边缘的填充框/框架.</p>
-<div class="section" id="id95">
-<span id="id96"></span><h3>参数<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 40%"/>
@@ -804,24 +706,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id97">
-<span id="id98"></span><h3>返回值<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id99">
-<span id="id100"></span><h3>返回值<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawRBox</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawrframe-x-y-w-h-r">
 <h2>u8g2.DrawRFrame(x,y,w,h,r)<a class="headerlink" href="#u8g2-drawrframe-x-y-w-h-r" title="永久链接至标题">¶</a></h2>
 <p>绘制一个从x / y位置（左上边缘）开始具有圆形边缘的空框/框架.</p>
-<div class="section" id="id101">
-<span id="id102"></span><h3>参数<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 40%"/>
@@ -850,24 +746,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id103">
-<span id="id104"></span><h3>返回值<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id105">
-<span id="id106"></span><h3>返回值<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawRFrame</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawglyph-x-y-encoding">
 <h2>u8g2.DrawGlyph(x,y,encoding)<a class="headerlink" href="#u8g2-drawglyph-x-y-encoding" title="永久链接至标题">¶</a></h2>
 <p>绘制一个图形字符。字符放置在指定的像素位置x和y.</p>
-<div class="section" id="id107">
-<span id="id108"></span><h3>参数<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 33%"/>
@@ -890,25 +780,19 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id109">
-<span id="id110"></span><h3>返回值<a class="headerlink" href="#id109" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id111">
-<span id="id112"></span><h3>返回值<a class="headerlink" href="#id111" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">SetFont</span><span class="p">(</span><span class="n">u8g2_font_unifont_t_symbols</span><span class="p">)</span>
 <span class="n">u8g2</span><span class="p">.</span><span class="n">DrawGlyph</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mh">0x2603</span><span class="p">)</span>   <span class="c1">-- dec 9731/hex 2603 Snowman</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-drawtriangle-x0-y0-x1-y1-x2-y2">
 <h2>u8g2.DrawTriangle(x0,y0,x1,y1,x2,y2)<a class="headerlink" href="#u8g2-drawtriangle-x0-y0-x1-y1-x2-y2" title="永久链接至标题">¶</a></h2>
 <p>绘制一个三角形（实心多边形）.</p>
-<div class="section" id="id113">
-<span id="id114"></span><h3>参数<a class="headerlink" href="#id113" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 56%"/>
@@ -940,24 +824,18 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id115">
-<span id="id116"></span><h3>返回值<a class="headerlink" href="#id115" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id117">
-<span id="id118"></span><h3>返回值<a class="headerlink" href="#id117" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">DrawTriangle</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">32</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="u8g2-setbitmapmode-mode">
 <h2>u8g2.SetBitmapMode(mode)<a class="headerlink" href="#u8g2-setbitmapmode-mode" title="永久链接至标题">¶</a></h2>
 <p>定义位图函数是否将写入背景色</p>
-<div class="section" id="id119">
-<span id="id120"></span><h3>参数<a class="headerlink" href="#id119" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 19%"/>
@@ -974,18 +852,13 @@ g2_font_unifont_t_symbols”为符号.</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id121">
-<span id="id122"></span><h3>返回值<a class="headerlink" href="#id121" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <p>无</p>
-</div>
-<div class="section" id="id123">
-<span id="id124"></span><h3>返回值<a class="headerlink" href="#id123" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">u8g2</span><span class="p">.</span><span class="n">SetBitmapMode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <hr class="docutils"/>
-</div>
 </div>
 </div>
 
@@ -998,7 +871,7 @@ g2_font_unifont_t_symbols”为符号.</p></td>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">pwm</div>
+                <div class="title">pwm - PWM模块</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -1009,7 +882,7 @@ g2_font_unifont_t_symbols”为符号.</p></td>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">timer</div>
+                <div class="title">timer - 操作底层定时器</div>
                 
               </div>
             </a>
@@ -1038,133 +911,28 @@ g2_font_unifont_t_symbols”为符号.</p></td>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">u8g2</a><ul>
-<li><a class="reference internal" href="#u8g2-begin-ssd1306">u8g2.begin(“ssd1306”)</a><ul>
-<li><a class="reference internal" href="#id1">参数</a></li>
-<li><a class="reference internal" href="#id2">返回值</a></li>
-<li><a class="reference internal" href="#id3">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-close">u8g2.close()</a><ul>
-<li><a class="reference internal" href="#id5">参数</a></li>
-<li><a class="reference internal" href="#id7">返回值</a></li>
-<li><a class="reference internal" href="#id9">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-clearbuffer">u8g2.ClearBuffer() 清除内存帧缓冲区中的所有像素。</a><ul>
-<li><a class="reference internal" href="#id11">参数</a></li>
-<li><a class="reference internal" href="#id13">返回值</a></li>
-<li><a class="reference internal" href="#id15">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-sendbuffer">u8g2.SendBuffer() 将存储器帧缓冲区的内容发送到显示器。</a><ul>
-<li><a class="reference internal" href="#id17">参数</a></li>
-<li><a class="reference internal" href="#id19">返回值</a></li>
-<li><a class="reference internal" href="#id21">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawutf8-str-x-y-u8g2-sendbuffer">u8g2.DrawUTF8(str, x, y) 在显示屏上画一段文字,要调用u8g2.SendBuffer()才会更新到屏幕</a><ul>
-<li><a class="reference internal" href="#id23">参数</a></li>
-<li><a class="reference internal" href="#id25">返回值</a></li>
-<li><a class="reference internal" href="#id27">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-setfontmode-mode">u8g2.SetFontMode(mode)</a><ul>
-<li><a class="reference internal" href="#id29">参数</a></li>
-<li><a class="reference internal" href="#id31">返回值</a></li>
-<li><a class="reference internal" href="#id33">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-setfont-font">u8g2.SetFont(font)</a><ul>
-<li><a class="reference internal" href="#id35">参数</a></li>
-<li><a class="reference internal" href="#id37">返回值</a></li>
-<li><a class="reference internal" href="#id39">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-getdisplayheight">u8g2.GetDisplayHeight()</a><ul>
-<li><a class="reference internal" href="#id41">参数</a></li>
-<li><a class="reference internal" href="#id43">返回值</a></li>
-<li><a class="reference internal" href="#id45">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-getdisplaywidth">u8g2.GetDisplayWidth()</a><ul>
-<li><a class="reference internal" href="#id47">参数</a></li>
-<li><a class="reference internal" href="#id49">返回值</a></li>
-<li><a class="reference internal" href="#id51">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawline-x0-y0-x1-y1">u8g2.DrawLine(x0,y0,x1,y1)</a><ul>
-<li><a class="reference internal" href="#id53">参数</a></li>
-<li><a class="reference internal" href="#id55">返回值</a></li>
-<li><a class="reference internal" href="#id57">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawcircle-x0-y0-rad-opt">u8g2.DrawCircle(x0,y0,rad,opt)</a><ul>
-<li><a class="reference internal" href="#id59">参数</a></li>
-<li><a class="reference internal" href="#id61">返回值</a></li>
-<li><a class="reference internal" href="#id63">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawdisc-x0-y0-rad-opt">u8g2.DrawDisc(x0,y0,rad,opt)</a><ul>
-<li><a class="reference internal" href="#id65">参数</a></li>
-<li><a class="reference internal" href="#id67">返回值</a></li>
-<li><a class="reference internal" href="#id69">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawellipse-x0-y0-rx-ry-opt">u8g2.DrawEllipse(x0,y0,rx,ry,opt)</a><ul>
-<li><a class="reference internal" href="#id71">参数</a></li>
-<li><a class="reference internal" href="#id73">返回值</a></li>
-<li><a class="reference internal" href="#id75">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawfilledellipse-x0-y0-rx-ry-opt">u8g2.DrawFilledEllipse(x0,y0,rx,ry,opt)</a><ul>
-<li><a class="reference internal" href="#id77">参数</a></li>
-<li><a class="reference internal" href="#id79">返回值</a></li>
-<li><a class="reference internal" href="#id81">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawbox-x-y-w-h">u8g2.DrawBox(x,y,w,h)</a><ul>
-<li><a class="reference internal" href="#id83">参数</a></li>
-<li><a class="reference internal" href="#id85">返回值</a></li>
-<li><a class="reference internal" href="#id87">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawframe-x-y-w-h">u8g2.DrawFrame(x,y,w,h)</a><ul>
-<li><a class="reference internal" href="#id89">参数</a></li>
-<li><a class="reference internal" href="#id91">返回值</a></li>
-<li><a class="reference internal" href="#id93">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawrbox-x-y-w-h-r">u8g2.DrawRBox(x,y,w,h,r)</a><ul>
-<li><a class="reference internal" href="#id95">参数</a></li>
-<li><a class="reference internal" href="#id97">返回值</a></li>
-<li><a class="reference internal" href="#id99">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawrframe-x-y-w-h-r">u8g2.DrawRFrame(x,y,w,h,r)</a><ul>
-<li><a class="reference internal" href="#id101">参数</a></li>
-<li><a class="reference internal" href="#id103">返回值</a></li>
-<li><a class="reference internal" href="#id105">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawglyph-x-y-encoding">u8g2.DrawGlyph(x,y,encoding)</a><ul>
-<li><a class="reference internal" href="#id107">参数</a></li>
-<li><a class="reference internal" href="#id109">返回值</a></li>
-<li><a class="reference internal" href="#id111">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-drawtriangle-x0-y0-x1-y1-x2-y2">u8g2.DrawTriangle(x0,y0,x1,y1,x2,y2)</a><ul>
-<li><a class="reference internal" href="#id113">参数</a></li>
-<li><a class="reference internal" href="#id115">返回值</a></li>
-<li><a class="reference internal" href="#id117">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#u8g2-setbitmapmode-mode">u8g2.SetBitmapMode(mode)</a><ul>
-<li><a class="reference internal" href="#id119">参数</a></li>
-<li><a class="reference internal" href="#id121">返回值</a></li>
-<li><a class="reference internal" href="#id123">返回值</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">u8g2 - u8g2图形处理库</a><ul>
+<li><a class="reference internal" href="#u8g2-begin-ssd1306">u8g2.begin(“ssd1306”)</a></li>
+<li><a class="reference internal" href="#u8g2-close">u8g2.close()</a></li>
+<li><a class="reference internal" href="#u8g2-clearbuffer">u8g2.ClearBuffer() 清除内存帧缓冲区中的所有像素。</a></li>
+<li><a class="reference internal" href="#u8g2-sendbuffer">u8g2.SendBuffer() 将存储器帧缓冲区的内容发送到显示器。</a></li>
+<li><a class="reference internal" href="#u8g2-drawutf8-str-x-y-u8g2-sendbuffer">u8g2.DrawUTF8(str, x, y) 在显示屏上画一段文字,要调用u8g2.SendBuffer()才会更新到屏幕</a></li>
+<li><a class="reference internal" href="#u8g2-setfontmode-mode">u8g2.SetFontMode(mode)</a></li>
+<li><a class="reference internal" href="#u8g2-setfont-font">u8g2.SetFont(font)</a></li>
+<li><a class="reference internal" href="#u8g2-getdisplayheight">u8g2.GetDisplayHeight()</a></li>
+<li><a class="reference internal" href="#u8g2-getdisplaywidth">u8g2.GetDisplayWidth()</a></li>
+<li><a class="reference internal" href="#u8g2-drawline-x0-y0-x1-y1">u8g2.DrawLine(x0,y0,x1,y1)</a></li>
+<li><a class="reference internal" href="#u8g2-drawcircle-x0-y0-rad-opt">u8g2.DrawCircle(x0,y0,rad,opt)</a></li>
+<li><a class="reference internal" href="#u8g2-drawdisc-x0-y0-rad-opt">u8g2.DrawDisc(x0,y0,rad,opt)</a></li>
+<li><a class="reference internal" href="#u8g2-drawellipse-x0-y0-rx-ry-opt">u8g2.DrawEllipse(x0,y0,rx,ry,opt)</a></li>
+<li><a class="reference internal" href="#u8g2-drawfilledellipse-x0-y0-rx-ry-opt">u8g2.DrawFilledEllipse(x0,y0,rx,ry,opt)</a></li>
+<li><a class="reference internal" href="#u8g2-drawbox-x-y-w-h">u8g2.DrawBox(x,y,w,h)</a></li>
+<li><a class="reference internal" href="#u8g2-drawframe-x-y-w-h">u8g2.DrawFrame(x,y,w,h)</a></li>
+<li><a class="reference internal" href="#u8g2-drawrbox-x-y-w-h-r">u8g2.DrawRBox(x,y,w,h,r)</a></li>
+<li><a class="reference internal" href="#u8g2-drawrframe-x-y-w-h-r">u8g2.DrawRFrame(x,y,w,h,r)</a></li>
+<li><a class="reference internal" href="#u8g2-drawglyph-x-y-encoding">u8g2.DrawGlyph(x,y,encoding)</a></li>
+<li><a class="reference internal" href="#u8g2-drawtriangle-x0-y0-x1-y1-x2-y2">u8g2.DrawTriangle(x0,y0,x1,y1,x2,y2)</a></li>
+<li><a class="reference internal" href="#u8g2-setbitmapmode-mode">u8g2.SetBitmapMode(mode)</a></li>
 </ul>
 </li>
 </ul>

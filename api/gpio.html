@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="rtos" href="rtos.html" /><link rel="prev" title="adc" href="adc.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="rtos - RTOS底层操作库" href="rtos.html" /><link rel="prev" title="adc - 数模转换" href="adc.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>gpio - LuatOS 文档</title>
+        <title>gpio - GPIO操作 - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -132,28 +132,28 @@
 <p class="caption"><span class="caption-text">api 文档</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uart.html">uart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="socket.html">socket</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http.html">http</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eink.html">eink</a></li>
-<li class="toctree-l2"><a class="reference internal" href="disp.html">disp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spi.html">spi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adc.html">adc</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gpio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="timer.html">timer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pm.html">pm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan - wifi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart.html">uart - 串口操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socket.html">socket - socket操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor - 传感器操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http.html">http - 执行http请求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto - 加解密和hash函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem - 操作低功耗不掉电内存块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">log - 日志库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eink.html">eink - 墨水屏操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disp.html">disp - 显示屏控制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss - NMEA数据处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c - I2C操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi.html">spi - spi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adc.html">adc - 数模转换</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gpio - GPIO操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos - RTOS底层操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timer.html">timer - 操作底层定时器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2 - u8g2图形处理库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm - PWM模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot - 中国电信CTIOT集成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm.html">pm - 电源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap - coap数据处理</a></li>
 </ul>
 </li>
 </ul>
@@ -170,14 +170,12 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="gpio">
-<h1>gpio<a class="headerlink" href="#gpio" title="永久链接至标题">¶</a></h1>
-<p>GPIO操作</p>
+        <div class="section" id="gpio-gpio">
+<h1>gpio - GPIO操作<a class="headerlink" href="#gpio-gpio" title="永久链接至标题">¶</a></h1>
 <div class="section" id="gpio-setup-pin-mode-pull">
 <h2>gpio.setup(pin, mode, pull)<a class="headerlink" href="#gpio-setup-pin-mode-pull" title="永久链接至标题">¶</a></h2>
 <p>设置管脚功能</p>
-<div class="section" id="id1">
-<h3>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 50%"/>
@@ -212,13 +210,11 @@ gpio.PULLDOWN,
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id2">
-<h3>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 18%"/>
+<col style="width: 82%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -226,32 +222,13 @@ gpio.PULLDOWN,
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>pin 针脚编号,必须是数值</p></td>
-</tr>
-<tr class="row-odd"><td><p>any</p></td>
-<td><p>mode 输入输出模式.
-数字0/1代表输出模式,nil
-代表输入模式,function代表中断模式</p></td>
-</tr>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>pull 上拉下列模式,
-可以是gpio.PULLUP 或
-gpio.PULLDOWN,
-需要根据实际硬件选用</p></td>
-</tr>
-<tr class="row-odd"><td><p>int</p></td>
-<td><p>irq 中断触发模式,
-上升沿gpio.RISING,
-下降沿gpio.FALLING,
-上升
-和下降都要gpio.BOTH.默认是RISING</p></td>
+<tr class="row-even"><td><p>any</p></td>
+<td><p>输出模式返回设置电平的闭包,
+输入模式和中断模式返回获取电平的闭包</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id3">
-<span id="id4"></span><h3>返回值<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>-- 设置gpio17为输入
 gpio.setup(17, nil)
 @usage
@@ -263,13 +240,11 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </pre></div>
 </div>
 </div>
-</div>
 <hr class="docutils"/>
 <div class="section" id="gpio-set-pin-value">
 <h2>gpio.set(pin, value)<a class="headerlink" href="#gpio-set-pin-value" title="永久链接至标题">¶</a></h2>
 <p>设置管脚电平</p>
-<div class="section" id="id5">
-<span id="id6"></span><h3>参数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 18%"/>
@@ -290,13 +265,11 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id7">
-<span id="id8"></span><h3>返回值<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 18%"/>
-<col style="width: 82%"/>
+<col style="width: 56%"/>
+<col style="width: 44%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -304,30 +277,22 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>pin 针脚编号,必须是数值</p></td>
-</tr>
-<tr class="row-odd"><td><p>int</p></td>
-<td><p>value 电平, 可以是 高电平gpio.HIGH, 低电平gpio.LOW,
-或者直接写数值1或0</p></td>
+<tr class="row-even"><td><p>nil</p></td>
+<td><p>无返回值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id9">
-<span id="id10"></span><h3>返回值<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 设置gpio17为低电平</span>
 <span class="n">gpio</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="gpio-get-pin">
 <h2>gpio.get(pin)<a class="headerlink" href="#gpio-get-pin" title="永久链接至标题">¶</a></h2>
 <p>获取管脚电平</p>
-<div class="section" id="id11">
-<span id="id12"></span><h3>参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 30%"/>
@@ -344,13 +309,11 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id13">
-<span id="id14"></span><h3>返回值<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 30%"/>
-<col style="width: 70%"/>
+<col style="width: 16%"/>
+<col style="width: 84%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -358,26 +321,22 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>pin 针脚编号,必须是数值</p></td>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>电平, 高电平gpio.HIGH, 低电平gpio.LOW, 对应数值1和0</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id15">
-<span id="id16"></span><h3>返回值<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 获取gpio17的当前电平</span>
 <span class="n">gpio</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="gpio-close-pin">
 <h2>gpio.close(pin)<a class="headerlink" href="#gpio-close-pin" title="永久链接至标题">¶</a></h2>
 <p>关闭管脚功能(高阻输入态),关掉中断</p>
-<div class="section" id="id17">
-<span id="id18"></span><h3>参数<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 30%"/>
@@ -394,13 +353,11 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id19">
-<span id="id20"></span><h3>返回值<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 30%"/>
-<col style="width: 70%"/>
+<col style="width: 32%"/>
+<col style="width: 68%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -408,26 +365,22 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>pin 针脚编号,必须是数值</p></td>
+<tr class="row-even"><td><p>nil</p></td>
+<td><p>无返回值,总是执行成功</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id21">
-<span id="id22"></span><h3>返回值<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 关闭gpio17</span>
 <span class="n">gpio</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 <hr class="docutils"/>
 <div class="section" id="gpio-setdefaultpull-val">
 <h2>gpio.setDefaultPull(val)<a class="headerlink" href="#gpio-setdefaultpull-val" title="永久链接至标题">¶</a></h2>
 <p>设置GPIO脚的默认上拉/下拉设置, 默认是平台自定义(一般为开漏).</p>
-<div class="section" id="id23">
-<span id="id24"></span><h3>参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 26%"/>
@@ -444,13 +397,11 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id25">
-<span id="id26"></span><h3>返回值<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
-<col style="width: 26%"/>
-<col style="width: 74%"/>
+<col style="width: 25%"/>
+<col style="width: 75%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>返回值类型</p></th>
@@ -458,20 +409,17 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>val 0平台自定义,1上拉, 2下拉</p></td>
+<tr class="row-even"><td><p>boolean</p></td>
+<td><p>传值正确返回true,否则返回false</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id27">
-<span id="id28"></span><h3>返回值<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- 设置gpio.setup的pull默认值为上拉</span>
 <span class="n">gpio</span><span class="p">.</span><span class="n">setDefaultPull</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <hr class="docutils"/>
-</div>
 </div>
 </div>
 
@@ -484,7 +432,7 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">rtos</div>
+                <div class="title">rtos - RTOS底层操作库</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -495,7 +443,7 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">adc</div>
+                <div class="title">adc - 数模转换</div>
                 
               </div>
             </a>
@@ -524,37 +472,12 @@ gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">gpio</a><ul>
-<li><a class="reference internal" href="#gpio-setup-pin-mode-pull">gpio.setup(pin, mode, pull)</a><ul>
-<li><a class="reference internal" href="#id1">参数</a></li>
-<li><a class="reference internal" href="#id2">返回值</a></li>
-<li><a class="reference internal" href="#id3">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gpio-set-pin-value">gpio.set(pin, value)</a><ul>
-<li><a class="reference internal" href="#id5">参数</a></li>
-<li><a class="reference internal" href="#id7">返回值</a></li>
-<li><a class="reference internal" href="#id9">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gpio-get-pin">gpio.get(pin)</a><ul>
-<li><a class="reference internal" href="#id11">参数</a></li>
-<li><a class="reference internal" href="#id13">返回值</a></li>
-<li><a class="reference internal" href="#id15">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gpio-close-pin">gpio.close(pin)</a><ul>
-<li><a class="reference internal" href="#id17">参数</a></li>
-<li><a class="reference internal" href="#id19">返回值</a></li>
-<li><a class="reference internal" href="#id21">返回值</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gpio-setdefaultpull-val">gpio.setDefaultPull(val)</a><ul>
-<li><a class="reference internal" href="#id23">参数</a></li>
-<li><a class="reference internal" href="#id25">返回值</a></li>
-<li><a class="reference internal" href="#id27">返回值</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">gpio - GPIO操作</a><ul>
+<li><a class="reference internal" href="#gpio-setup-pin-mode-pull">gpio.setup(pin, mode, pull)</a></li>
+<li><a class="reference internal" href="#gpio-set-pin-value">gpio.set(pin, value)</a></li>
+<li><a class="reference internal" href="#gpio-get-pin">gpio.get(pin)</a></li>
+<li><a class="reference internal" href="#gpio-close-pin">gpio.close(pin)</a></li>
+<li><a class="reference internal" href="#gpio-setdefaultpull-val">gpio.setDefaultPull(val)</a></li>
 </ul>
 </li>
 </ul>

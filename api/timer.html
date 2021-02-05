@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="u8g2" href="u8g2.html" /><link rel="prev" title="rtos" href="rtos.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="u8g2 - u8g2图形处理库" href="u8g2.html" /><link rel="prev" title="rtos - RTOS底层操作库" href="rtos.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
-        <title>timer - LuatOS 文档</title>
+        <title>timer - 操作底层定时器 - LuatOS 文档</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -132,28 +132,28 @@
 <p class="caption"><span class="caption-text">api 文档</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">LuatOS接口文档</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uart.html">uart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="socket.html">socket</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http.html">http</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eink.html">eink</a></li>
-<li class="toctree-l2"><a class="reference internal" href="disp.html">disp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spi.html">spi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adc.html">adc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">timer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pm.html">pm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan.html">wlan - wifi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart.html">uart - 串口操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socket.html">socket - socket操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html">sensor - 传感器操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http.html">http - 执行http请求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html">crypto - 加解密和hash函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lpmem.html">lpmem - 操作低功耗不掉电内存块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">log - 日志库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eink.html">eink - 墨水屏操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disp.html">disp - 显示屏控制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libgnss.html">libgnss - NMEA数据处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i2c.html">i2c - I2C操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi.html">spi - spi操作库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adc.html">adc - 数模转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html">gpio - GPIO操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtos.html">rtos - RTOS底层操作库</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">timer - 操作底层定时器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="u8g2.html">u8g2 - u8g2图形处理库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwm.html">pwm - PWM模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctiot.html">ctiot - 中国电信CTIOT集成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm.html">pm - 电源管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libcoap.html">libcoap - coap数据处理</a></li>
 </ul>
 </li>
 </ul>
@@ -171,13 +171,11 @@
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="timer">
-<h1>timer<a class="headerlink" href="#timer" title="永久链接至标题">¶</a></h1>
-<p>操作底层定时器</p>
+<h1>timer - 操作底层定时器<a class="headerlink" href="#timer" title="永久链接至标题">¶</a></h1>
 <div class="section" id="timer-mdelay-timeout">
 <h2>timer.mdelay(timeout)<a class="headerlink" href="#timer-mdelay-timeout" title="永久链接至标题">¶</a></h2>
 <p>硬阻塞指定时长,期间没有任何luat代码会执行,包括底层消息处理机制</p>
-<div class="section" id="id1">
-<h3>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p><strong>参数</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 56%"/>
@@ -194,9 +192,7 @@
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id2">
-<h3>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p><strong>返回值</strong></p>
 <div class="table-wrapper"><table class="docutils align-default">
 <colgroup>
 <col style="width: 56%"/>
@@ -208,19 +204,16 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>int</p></td>
-<td><p>阻塞时长</p></td>
+<tr class="row-even"><td><p>nil</p></td>
+<td><p>无返回值</p></td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div class="section" id="id3">
-<span id="id4"></span><h3>返回值<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p><strong>例子</strong></p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>无
 </pre></div>
 </div>
 <hr class="docutils"/>
-</div>
 </div>
 </div>
 
@@ -233,7 +226,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">u8g2</div>
+                <div class="title">u8g2 - u8g2图形处理库</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -244,7 +237,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">rtos</div>
+                <div class="title">rtos - RTOS底层操作库</div>
                 
               </div>
             </a>
@@ -273,13 +266,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">timer</a><ul>
-<li><a class="reference internal" href="#timer-mdelay-timeout">timer.mdelay(timeout)</a><ul>
-<li><a class="reference internal" href="#id1">参数</a></li>
-<li><a class="reference internal" href="#id2">返回值</a></li>
-<li><a class="reference internal" href="#id3">返回值</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">timer - 操作底层定时器</a><ul>
+<li><a class="reference internal" href="#timer-mdelay-timeout">timer.mdelay(timeout)</a></li>
 </ul>
 </li>
 </ul>
