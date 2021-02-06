@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="进阶" href="advanced.html" /><link rel="prev" title="在线体验LuatOS" href="../pages/emulator.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="进阶" href="advanced.html" /><link rel="prev" title="Lua简介" href="index.html" />
 
     <meta name="generator" content="sphinx-3.4.3, furo 2020.12.30.beta24"/>
         <title>入门 - LuatOS 文档</title>
@@ -123,15 +123,21 @@
 <li class="toctree-l1"><a class="reference external" href="https://luatos.wiki">首页</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/emulator.html">在线体验LuatOS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Lua 教程</span></p>
+<p class="caption"><span class="caption-text">快速上手</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">入门</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">进阶</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source.html">与c语言交互</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../boardGuide/index.html">开发板上手</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../boardGuide/x-magic-box.html">小饭魔盒（Air820）</a></li>
 </ul>
-<p class="caption"><span class="caption-text">api 文档</span></p>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Lua简介</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html">进阶</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API参考手册</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">LuatOS接口文档</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">LuatOS接口文档</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/adc.html">adc - 数模转换</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/crypto.html">crypto - 加解密和hash函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/ctiot.html">ctiot - 中国电信CTIOT集成</a></li>
@@ -157,6 +163,11 @@
 </ul>
 </li>
 </ul>
+<p class="caption"><span class="caption-text">内核开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../develop/compile.html">编译源码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/clib.html">添加C库</a></li>
+</ul>
 
 </div>
 </div>
@@ -172,11 +183,6 @@
         </label>
         <div class="section" id="id1">
 <h1>入门<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="lua">
-<h2>Lua简介<a class="headerlink" href="#lua" title="永久链接至标题">¶</a></h2>
-<p>Lua可以说是目前嵌入式方案中，资源占用 <strong>最小</strong> 、运行效率 <strong>最高</strong> 、语法 <strong>最简洁</strong> 的一门脚本语言。</p>
-<p>对于编程小白来说，它适合作为你的编程入门语言，因为语法简单。对于会c语言的老手来说，它与c可以完美契合，再加上LuatOS本身就是开源，你可以轻松地使用c为其添加一套c库接口，享受它的高效。</p>
-</div>
 <div class="section" id="id2">
 <h2>变量<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id3">
@@ -218,14 +224,14 @@
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../pages/emulator.html">
+          <a class="prev-page" href="index.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">在线体验LuatOS</div>
+                <div class="title">Lua简介</div>
                 
               </div>
             </a>
@@ -255,7 +261,6 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">入门</a><ul>
-<li><a class="reference internal" href="#lua">Lua简介</a></li>
 <li><a class="reference internal" href="#id2">变量</a><ul>
 <li><a class="reference internal" href="#id3">变量名</a></li>
 <li><a class="reference internal" href="#number">number类型</a></li>
